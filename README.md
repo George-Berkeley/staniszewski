@@ -482,7 +482,7 @@
   <a href="#hero" class="nav-logo">Your Name</a>
   <ul class="nav-links">
     <li><a href="#publications">Publications</a></li>
-    <li><a href="#tv">Television</a></li>
+    <li><a href="about.html">Television</a></li>
     <li><a href="#cv">CV</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
