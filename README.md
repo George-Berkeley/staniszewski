@@ -478,13 +478,13 @@
 
 <!-- Navigation -->
 <nav id="navbar">
-  <a href="polish.html" class="nav-logo">Polski</a>
+  <a href="polish.html" class="nav-logo">Zmień język na polski</a>
   <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#writing">Writing</a></li>
-    <li><a href="#media">Media</a></li>
-    <li><a href="#cv">CV</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="writing.html">Writing</a></li>
+    <li><a href="media.html">Media</a></li>
+    <li><a href="cv.html">CV</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
 
