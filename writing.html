@@ -478,13 +478,13 @@
 
 <!-- Navigation -->
 <nav id="navbar">
-  <a href="polish.html" class="nav-logo">Polski</a>
+  <a href="polish.html" class="nav-logo">Zmień język na polski</a>
   <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#writing">Writing</a></li>
-    <li><a href="#media">Media</a></li>
-    <li><a href="#cv">CV</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="writing.html">Writing</a></li>
+    <li><a href="media.html">Media</a></li>
+    <li><a href="cv.html">CV</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
 
@@ -548,3 +548,78 @@
     </a>
   </div>
 </section>
+
+
+
+<!-- Footer / Contact -->
+<footer id="contact">
+  <div>
+    <div class="footer-brand">Your Name</div>
+    <div class="footer-tagline">Writer, Scholar & Broadcaster</div>
+  </div>
+  <div>
+    <div class="footer-heading">Navigate</div>
+    <ul class="footer-links">
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#tv">Television</a></li>
+      <li><a href="#cv">CV &amp; Biography</a></li>
+    </ul>
+  </div>
+  <div>
+    <div class="footer-heading">Get in Touch</div>
+    <ul class="footer-links">
+      <li><a href="mailto:hello@yourname.com">hello@yourname.com</a></li>
+      <li><a href="#">Media enquiries</a></li>
+      <li><a href="#">Speaking requests</a></li>
+      <li><a href="#">Twitter / X</a></li>
+    </ul>
+  </div>
+  <div class="footer-copy">
+    <span>© 2025 Your Name. All rights reserved.</span>
+    <span>Design: editorial / typographic</span>
+  </div>
+</footer>
+
+<script>
+  // Cursor
+  const cursor = document.getElementById('cursor');
+  document.addEventListener('mousemove', e => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top  = e.clientY + 'px';
+  });
+  document.querySelectorAll('a, button').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      cursor.style.width = '20px';
+      cursor.style.height = '20px';
+    });
+    el.addEventListener('mouseleave', () => {
+      cursor.style.width = '10px';
+      cursor.style.height = '10px';
+    });
+  });
+
+  // Navbar on scroll
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // Scroll-triggered reveals
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        // stagger siblings
+        const siblings = [...entry.target.parentElement.querySelectorAll('.reveal:not(.visible)')];
+        const idx = siblings.indexOf(entry.target);
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, Math.min(idx * 80, 400));
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
