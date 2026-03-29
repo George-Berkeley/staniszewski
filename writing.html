@@ -65,7 +65,7 @@
       color: var(--ink);
       text-decoration: none;
     }
-    .nav-links { display: flex; gap: 2.4rem; list-style: none; }
+    .nav-links { display: flex; gap: 2.4rem; list-style: none; align-items: center; }
     .nav-links a {
       font-family: var(--sans);
       font-size: .78rem;
