@@ -14,8 +14,7 @@
       --ink:    #1a1612;
       --paper:  #f5f0e8;
       --cream:  #ede7d9;
-      --gold:   #b5802a;
-      --muted:  #7a7060;
+      --gold:   #b5802a;      --muted:  #7a7060;
       --rule:   rgba(26,22,18,.15);
       --serif:  'Cormorant Garamond', Georgia, serif;
       --sans:   'Karla', sans-serif;
@@ -480,6 +479,8 @@
 <nav id="navbar">
   <a href="polish.html" class="nav-logo">Zmień język na polski</a>
   <ul class="nav-links">
+    <li><a href="#"> </a></li>
+    <li><a href="about.html">About</a></li>
     <li><a href="writing.html">Writing</a></li>
     <li><a href="media.html">Media</a></li>
     <li><a href="cv.html">CV</a></li>
