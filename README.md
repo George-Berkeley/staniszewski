@@ -1,9 +1,8 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name — Writer, Scholar & Broadcaster</title>
+  <title>Bartek Staniszewski</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Karla:wght@300;400;500&display=swap" rel="stylesheet">
@@ -479,10 +478,11 @@
 
 <!-- Navigation -->
 <nav id="navbar">
-  <a href="#hero" class="nav-logo">Your Name</a>
+  <a href="polish.html" class="nav-logo">Polski</a>
   <ul class="nav-links">
-    <li><a href="#publications">Publications</a></li>
-    <li><a href="polish.html">Television</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#writing">Writing</a></li>
+    <li><a href="#media">Media</a></li>
     <li><a href="#cv">CV</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -492,10 +492,10 @@
 <section id="hero">
   <div class="hero-left">
     <p class="hero-eyebrow">Writer · Scholar · Broadcaster</p>
-    <h1 class="hero-name">Your<br><em>Name</em><br>Here</h1>
-    <p class="hero-tagline">Writing at the intersection of history, culture, and the present moment.</p>
+    <h1 class="hero-name">Bartek Staniszewski</h1>
+    <p class="hero-tagline">Politics, philosophy, influence</p>
     <div class="hero-actions">
-      <a href="#publications" class="btn btn-gold">Read My Work</a>
+      <a href="#publications" class="btn btn-gold">Read my work</a>
       <a href="#cv" class="btn">View CV</a>
     </div>
   </div>
