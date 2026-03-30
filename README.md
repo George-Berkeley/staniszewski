@@ -460,7 +460,7 @@
       .nav-links { gap: 1.5rem; }
       #hero { grid-template-columns: 1fr; min-height: auto; }
       .hero-left { padding: 5rem 1.5rem 3rem; border-right: none; border-bottom: 1px solid var(--rule); }
-      .hero-right { min-height: 280px; }
+      .hero-right { min-height: 752px; min-width: 752px;}
       section { padding: 5rem 1.5rem; }
       .cv-cols { grid-template-columns: 1fr; gap: 3rem; }
       footer { grid-template-columns: 1fr; }
