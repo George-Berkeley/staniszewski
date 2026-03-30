@@ -460,7 +460,21 @@
       .nav-links { gap: 1.5rem; }
       #hero { grid-template-columns: 1fr; min-height: auto; }
       .hero-left { padding: 5rem 1.5rem 3rem; border-right: none; border-bottom: 1px solid var(--rule); }
-      .hero-right { min-height: 752px; min-width: 752px;}
+      .hero-right {
+  position: relative;
+  overflow: hidden;
+  min-height: 752px;
+}
+
+.hero-right img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
       section { padding: 5rem 1.5rem; }
       .cv-cols { grid-template-columns: 1fr; gap: 3rem; }
       footer { grid-template-columns: 1fr; }
@@ -500,7 +514,7 @@
     </div>
   </div>
   <div class="hero-right">
-  <img src="https://i.imgur.com/VsjPWfd.png" alt="" width="878" height="878" style="border:5px solid black"/>
+  <img src="https://i.imgur.com/VsjPWfd.png" style="border:5px solid black"/>
   </div>
 </section>
 
