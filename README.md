@@ -4,6 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bartek Staniszewski</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Karla:wght@300;400;500&display=swap" rel="stylesheet">
 
@@ -491,7 +492,7 @@
 
 <!-- Navigation -->
 <nav id="navbar">
-  <a href="polish.html" class="nav-logo">&#x1f1f5;&#x1f1f1; Zmień język na polski</a>
+  <a href="polish.html" class="nav-logo"><span class="fi fi-pl"></span> Zmień język na polski</a>
   <ul class="nav-links">
     <li><a href="#"> </a></li>
     <li><a href="https://www.staniszewski.biz/">About</a></li>
