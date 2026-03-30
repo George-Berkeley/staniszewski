@@ -477,7 +477,7 @@
 
 <!-- Navigation -->
 <nav id="navbar">
-  <a href="polish.html" class="nav-logo">Zmień język na polski</a>
+  <a href="polish.html" class="nav-logo">&#x1f1f5;&#x1f1f1; Zmień język na polski</a>
   <ul class="nav-links">
     <li><a href="#"> </a></li>
     <li><a href="about.html">About</a></li>
