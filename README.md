@@ -500,22 +500,7 @@
     </div>
   </div>
   <div class="hero-right">
-    <div class="hero-right-bg"></div>
-    <div class="hero-counter">
-      <div class="counter-item">
-        <div class="counter-num">12</div>
-        <div class="counter-label">Publications</div>
-      </div>
-      <div class="counter-item">
-        <div class="counter-num">34</div>
-        <div class="counter-label">TV Appearances</div>
-      </div>
-      <div class="counter-item">
-        <div class="counter-num">15+</div>
-        <div class="counter-label">Years Active</div>
-      </div>
-    </div>
-    <p class="hero-pull">Ideas worth fighting for, arguments worth making.</p>
+  <img src="https://i.imgur.com/VsjPWfd.png" alt="" width="878" height="878" style="border:5px solid black"/>
   </div>
 </section>
 
@@ -650,97 +635,7 @@
   </div>
 </section>
 
-<!-- CV -->
-<section id="cv">
-  <div class="section-header reveal">
-    <div class="section-number">03</div>
-    <div class="section-title-block">
-      <h2>Curriculum Vitae</h2>
-      <p>Positions, education & selected honours</p>
-    </div>
-  </div>
 
-  <div class="cv-cols">
-    <div>
-      <div class="cv-section-title reveal">Academic & Professional</div>
-
-      <div class="cv-entry reveal">
-        <div class="cv-entry-head">
-          <div class="cv-role">Professor of Modern History</div>
-          <div class="cv-period">2018–present</div>
-        </div>
-        <div class="cv-org">University College London</div>
-        <div class="cv-detail">Chair of Twentieth-Century European Studies. Director of the Centre for Memory Studies.</div>
-      </div>
-
-      <div class="cv-entry reveal">
-        <div class="cv-entry-head">
-          <div class="cv-role">Contributing Editor</div>
-          <div class="cv-period">2015–present</div>
-        </div>
-        <div class="cv-org">The Guardian, Long Reads</div>
-        <div class="cv-detail">Quarterly longform essay and reportage on history, politics and culture.</div>
-      </div>
-
-      <div class="cv-entry reveal">
-        <div class="cv-entry-head">
-          <div class="cv-role">Senior Research Fellow</div>
-          <div class="cv-period">2013–2018</div>
-        </div>
-        <div class="cv-org">St Antony's College, Oxford</div>
-      </div>
-
-      <div class="cv-entry reveal">
-        <div class="cv-entry-head">
-          <div class="cv-role">Foreign Correspondent</div>
-          <div class="cv-period">2005–2013</div>
-        </div>
-        <div class="cv-org">The Times / The Economist</div>
-        <div class="cv-detail">Eastern and Central Europe desk. Based in Warsaw, Prague, and Kyiv.</div>
-      </div>
-    </div>
-
-    <div>
-      <div class="cv-section-title reveal">Education & Honours</div>
-
-      <div class="cv-entry reveal">
-        <div class="cv-entry-head">
-          <div class="cv-role">D.Phil, Modern History</div>
-          <div class="cv-period">2005</div>
-        </div>
-        <div class="cv-org">University of Oxford</div>
-        <div class="cv-detail">Thesis: <em>"Nation, Myth and Memory in Interwar Poland"</em>. Supervisors: Prof. T. Judt, Prof. J. Gross.</div>
-      </div>
-
-      <div class="cv-entry reveal">
-        <div class="cv-entry-head">
-          <div class="cv-role">BA (Hons), History, First Class</div>
-          <div class="cv-period">2001</div>
-        </div>
-        <div class="cv-org">Cambridge University</div>
-      </div>
-
-      <div class="cv-section-title reveal" style="margin-top:2.5rem">Awards</div>
-
-      <div class="cv-entry reveal">
-        <div class="cv-role">Historians' Book Prize</div>
-        <div class="cv-org" style="margin-top:.2rem">For <em>The Memory of Nations</em>, 2021</div>
-      </div>
-      <div class="cv-entry reveal">
-        <div class="cv-role">Baillie Gifford Prize Longlist</div>
-        <div class="cv-org" style="margin-top:.2rem">For <em>Borderlands</em>, 2022</div>
-      </div>
-      <div class="cv-entry reveal">
-        <div class="cv-role">RTS Television Journalism Award</div>
-        <div class="cv-org" style="margin-top:.2rem">Borderlands documentary series, 2023</div>
-      </div>
-
-      <div class="cv-download reveal">
-        <a href="#" class="btn btn-gold">Download Full CV (PDF)</a>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- Footer / Contact -->
 <footer id="contact">
