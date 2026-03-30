@@ -163,6 +163,31 @@
       overflow: hidden;
       display: flex; align-items: flex-end; justify-content: flex-end;
       padding: 3rem;
+      min-height: 752px;
+    }
+   .hero-right img {
+      position: absolute;
+      inset: 0;           /* shorthand for top:0; right:0; bottom:0; left:0 */
+      width: 100%;
+      height: 100%;
+      object-fit: cover;        /* preserve aspect ratio; crop to fill */
+      object-position: center top;
+      display: block;
+      border: 5px solid black;
+    }
+     .hero-name {
+      position: absolute;
+      bottom: 2rem;
+      left: 2rem;
+      z-index: 1;
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 2.5vw, 2.6rem);
+      font-weight: 300;
+      color: #fff;
+      text-shadow: 0 2px 16px rgba(0,0,0,.55);
+      opacity: 0;
+      animation: fadeUp .7s .4s forwards;
+    }
     }
     .hero-right-bg {
       position: absolute; inset: 0;
