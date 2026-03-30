@@ -506,15 +506,18 @@
 <!-- Hero -->
 <section id="hero">
   <div class="hero-left">
-    <p class="hero-eyebrow">Writer · Scholar · Broadcaster</p>
-    <h1 class="hero-name">Bartek Staniszewski</h1>
-    <p class="hero-tagline">Politics, philosophy, influence</p>
+    <p class="hero-eyebrow"><a href="https://www.linkedin.com/in/bastaniszewski/">LinkedIn</a> · <a href="https://x.com/BGStaniszewski">Twitter</a> · <a href="mailto:bastaniszewski@gmail.com">Email</a></p>
+   
+    <p class="hero-tagline">I am an experienced political analyst and strategist. Currently based between Warsaw and London, I am the co-Founder of Bright Blue Europe and former Head of Research at Bright Blue in the UK.<br>
+    
+    Having spent four years working in Westminster, I authored nine research reports, published over fifty articles in twelve different publications, including <i>the Spectator</i> and <i>the Critic</i>, and hired seven full-time employees. Under my leadership, the research team at Bright Blue  published sixteen analyses and had around thirty of its policy recommendations adopted by either the UK Government or major UK political parties. Our work has been featured, among others, on the BBC, GB News, LBC, and Vatican News. <br> I am also the Editor-in-Chief of Centre Write and a political adviser to several political campaigns.<br>I am primarily interested in social policy, political philosophy, and political strategy. Before working in politics, I read for a Master's in Philosophical Theology at the University of Oxford. You can find my work on those topics on this website.</p>
     <div class="hero-actions">
       <a href="#publications" class="btn btn-gold">Read my work</a>
       <a href="#cv" class="btn">View CV</a>
     </div>
   </div>
   <div class="hero-right">
+     <h1 class="hero-name">Bartek Staniszewski</h1>
   <img src="https://i.imgur.com/VsjPWfd.png" style="border:5px solid black"/>
   </div>
 </section>
