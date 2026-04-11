@@ -91,19 +91,20 @@
 
     /* ── Hero ── */
     #hero {
-      min-height: 100vh;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      padding-top: 80px;
-      overflow: hidden;
-    }
-    .hero-left {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 7rem 4rem 6rem 3rem;
-      border-right: 1px solid var(--rule);
-    }
+min-height: auto; 
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 80px;
+  overflow: hidden;
+  align-items: start; 
+}
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  padding: 3rem 4rem 6rem 3rem; 
+  border-right: 1px solid var(--rule);
+}
     .hero-eyebrow {
       font-family: var(--sans);
       font-size: .72rem;
@@ -138,10 +139,15 @@
       opacity: 0;
       animation: fadeUp .7s .4s forwards;
     }
-    .hero-actions {
-      display: flex; gap: 1rem; margin-top: 3rem;
-      opacity: 0; animation: fadeUp .7s .55s forwards;
-    }
+.hero-actions {
+  position: relative; /* Ensure they appear over the background */
+  z-index: 2;
+  display: flex; 
+  gap: 1rem; 
+  margin-top: 3rem; /* Space between the image/name and buttons */
+  opacity: 0;
+  animation: fadeUp .7s .55s forwards;
+}
     .btn {
       display: inline-block;
       padding: .7rem 1.8rem;
@@ -159,17 +165,17 @@
     .btn-gold { border-color: var(--gold); color: var(--gold); }
     .btn-gold:hover { background: var(--gold); color: var(--paper); }
 
-    .hero-right {
-      position: relative;
-      background: var(--cream);
-      overflow: hidden;
-      display: flex;
-      align-items: flex-end; 
-      justify-content: flex-end;
-      padding: 3rem;
-      /* Change min-height to a fixed height */
-      height: 550px; 
-    }
+   .hero-right {
+  position: relative;
+  background: var(--cream);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; /* Stack image and buttons vertically */
+  align-items: flex-end; 
+  justify-content: flex-end;
+  padding: 3rem;
+  height: 550px;
+}
    .hero-right img {
       position: absolute;
       inset: 0;           /* shorthand for top:0; right:0; bottom:0; left:0 */
@@ -544,11 +550,11 @@
   <div class="hero-right">
      <h1 class="hero-name">Bartek Staniszewski</h1>
   <img src="https://i.imgur.com/VsjPWfd.png"/>
-  </div>
       <div class="hero-actions">
       <a href="#publications" class="btn btn-gold">Read my work</a>
       <a href="#cv" class="btn">View CV</a>
     </div>
+  </div>
 </section>
 
 <!-- Publications -->
