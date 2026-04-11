@@ -16,7 +16,7 @@
       --ink:    #1a1612;
       --paper:  #f5f0e8;
       --cream:  #ede7d9;
-      --green:  #2596be;
+      --green:  #152913;
       --gold:   #b5802a;      --muted:  #7a7060;
       --rule:   rgba(26,22,18,.15);
       --serif:  'Cormorant Garamond', Georgia, serif;
