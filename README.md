@@ -183,7 +183,7 @@ min-height: auto;
 }
      .hero-name {
       position: absolute;
-      bottom: calc(2rem - 10px)
+      bottom: calc(2rem - 1px)
       left: 2rem;
       z-index: 1;
       font-family: var(--serif);
