@@ -572,17 +572,17 @@ min-height: auto;
   <div class="section-header reveal">
     <div class="section-number">Writing highlights</div>
     <div class="section-title-block">
-      <h2>Writing highlights</h2>
+      <h2></h2>
       <p>Reports, articles & analyses</p>
     </div>
   </div>
 
   <div class="publications-grid">
     <a href="#" class="pub-card reveal">
-      <div class="pub-year">2024</div>
-      <div class="pub-title">The Unfinished Century: Europe After the Wars</div>
-      <div class="pub-venue">Allen Lane / Penguin Press</div>
-      <div class="pub-desc">A reappraisal of twentieth-century European history and what it means for the crises of today.</div>
+      <div class="pub-year">2025</div>
+      <div class="pub-title">Mending the net? A new centre-right approach to social security</div>
+      <div class="pub-venue">Bright Blue</div>
+      <div class="pub-desc">I edited and wrote the introduction to this collection of essays on reforming social security in the UK. Featuring also contributions from Danny Kruger, Henry Hill, David Goodhart, John Glen, and others.</div>
       <span class="pub-arrow">Read more →</span>
     </a>
 
