@@ -165,7 +165,7 @@ min-height: auto;
 
 .hero-right {
   position: relative;
-  background: var(--cream);
+  background: var(--paper);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -222,6 +222,18 @@ min-height: auto;
       opacity: .5;
       margin-right: .1em;
     }
+    .hero-image-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.hero-image-wrap img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
     .hero-counter {
       position: absolute; top: 3rem; left: 3rem;
       display: flex; flex-direction: column; gap: 2rem;
@@ -543,14 +555,16 @@ min-height: auto;
     In my time advising politicians and public affairs, I authored nine research reports, published over fifty articles in twelve different publications, including <i>the Spectator</i> and <i>the Critic</i>, and hired seven full-time employees. Under my leadership, the research team at Bright Blue  published sixteen analyses and had around thirty of its policy recommendations adopted by either the UK Government or major UK political parties. Our work has been featured, among others, on the BBC, GB News, LBC, and Vatican News. <br> <br>I am also the Editor-in-Chief of Centre Write and a political adviser to several political campaigns.<br><br>I am primarily interested in social policy, political philosophy, and political strategy. Before working in politics, I read for a Master's in Philosophical Theology at the University of Oxford. You can find my work on those topics on this website.</p>
 
   </div>
-  <div class="hero-right">
-     <h1 class="hero-name">Bartek Staniszewski</h1>
-  <img src="https://i.imgur.com/VsjPWfd.png"/>
-      <div class="hero-actions">
-      <a href="#publications" class="btn btn-gold">Read my work</a>
-      <a href="#cv" class="btn">View CV</a>
-    </div>
+ <div class="hero-right">
+  <div class="hero-image-wrap">
+    <img src="https://i.imgur.com/VsjPWfd.png"/>
+    <h1 class="hero-name">Bartek Staniszewski</h1>
   </div>
+  <div class="hero-actions">
+    <a href="#publications" class="btn btn-gold">Read my work</a>
+    <a href="#cv" class="btn">View CV</a>
+  </div>
+</div>
 </section>
 
 <!-- Publications -->
