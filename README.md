@@ -3,6 +3,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bartek Staniszewski</title>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +16,7 @@
       --ink:    #1a1612;
       --paper:  #f5f0e8;
       --cream:  #ede7d9;
+      --green:  #2596be
       --gold:   #b5802a;      --muted:  #7a7060;
       --rule:   rgba(26,22,18,.15);
       --serif:  'Cormorant Garamond', Georgia, serif;
@@ -418,7 +420,7 @@
 
     /* ── Contact / Footer ── */
     footer {
-      background: var(--ink);
+      background: var(--green);
       color: var(--paper);
       padding: 5rem 3rem 3rem;
       display: grid;
@@ -686,29 +688,38 @@
 <!-- Footer / Contact -->
 <footer id="contact">
   <div>
-    <div class="footer-brand">Your Name</div>
-    <div class="footer-tagline">Writer, Scholar & Broadcaster</div>
+    <div class="footer-brand">Bartek Staniszewski</div>
+    <div class="footer-tagline">Political advisory, analysis & strategy</div>
   </div>
+
+    <li><a href="#"> </a></li>
+    <li><a href="https://www.staniszewski.biz/">About</a></li>
+    <li><a href="writing.html">Writing</a></li>
+    <li><a href="media.html">Media</a></li>
+    <li><a href="cv.html">CV</a></li>
+    <li><a href="contact.html">Contact</a></li>
+
+  
   <div>
     <div class="footer-heading">Navigate</div>
     <ul class="footer-links">
-      <li><a href="#publications">Publications</a></li>
-      <li><a href="#tv">Television</a></li>
-      <li><a href="#cv">CV &amp; Biography</a></li>
+      <li><a href="writing.html">Publications</a></li>
+      <li><a href="media.html">Media</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </div>
   <div>
-    <div class="footer-heading">Get in Touch</div>
+    <div class="footer-heading">Other links</div>
     <ul class="footer-links">
-      <li><a href="mailto:hello@yourname.com">hello@yourname.com</a></li>
-      <li><a href="#">Media enquiries</a></li>
-      <li><a href="#">Speaking requests</a></li>
-      <li><a href="#">Twitter / X</a></li>
+      <li><a href="https://www.eubrightblue.org/">Bright Blue Europe</a></li>
+      <li><a href="https://www.brightblue.org.uk/portfolio/bartek-staniszewski/">Bright Blue UK</a></li>
+      <li><a href="https://www.linkedin.com/in/bastaniszewski/">LinkedIn</a></li>
+      <li><a href="https://x.com/BGStaniszewski">Twitter / X</a></li>
     </ul>
   </div>
   <div class="footer-copy">
-    <span>© 2025 Your Name. All rights reserved.</span>
-    <span>Design: editorial / typographic</span>
+    <span>Created and  designed in 2026 by Bartlomiej Staniszewski.</span>
   </div>
 </footer>
 
