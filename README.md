@@ -541,7 +541,7 @@ min-height: auto;
 <!-- Hero -->
 <section id="hero">
   <div class="hero-left">
-    <p class="hero-eyebrow"><a href="https://www.linkedin.com/in/bastaniszewski/">LinkedIn</a> · <a href="https://x.com/BGStaniszewski">Twitter</a> · <a href="mailto:bastaniszewski@gmail.com">Email</a></p>
+    <p class="hero-eyebrow"><a href="https://www.linkedin.com/in/bastaniszewski/"><i class="fa-brands fa-linkedin"></i> LinkedIn</a> · <a href="https://x.com/BGStaniszewski"><i class="fa-brands fa-square-twitter"></i> Twitter</a> · <a href="mailto:bastaniszewski@gmail.com"><i class="fa-solid fa-square-envelope"></i> Email</a></p>
    
     <p>I am a political analyst and strategist with four years of experience working in the heart of Westminster. Currently based between Warsaw and London, I am the co-Founder of Bright Blue Europe and former Head of Research at Bright Blue in the UK.<br><br>
     
