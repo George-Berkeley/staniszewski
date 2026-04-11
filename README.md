@@ -16,7 +16,7 @@
       --ink:    #1a1612;
       --paper:  #f5f0e8;
       --cream:  #ede7d9;
-      --green:  #2596be
+      --green:  #2596be;
       --gold:   #b5802a;      --muted:  #7a7060;
       --rule:   rgba(26,22,18,.15);
       --serif:  'Cormorant Garamond', Georgia, serif;
@@ -521,7 +521,7 @@
 
 <!-- Navigation -->
 <nav id="navbar">
-  <span class="fi fi-pl"></span><a href="polish.html" class="nav-logo"> Zmień język na polski</a>
+  <a href="polish.html" class="nav-logo"> Zmień język na polski <span class="fi fi-pl"></span></a>
   <ul class="nav-links">
     <li><a href="#"> </a></li>
     <li><a href="https://www.staniszewski.biz/">About</a></li>
@@ -690,15 +690,6 @@
     <div class="footer-brand">Bartek Staniszewski</div>
     <div class="footer-tagline">Political advisory, analysis & strategy</div>
   </div>
-
-    <li><a href="#"> </a></li>
-    <li><a href="https://www.staniszewski.biz/">About</a></li>
-    <li><a href="writing.html">Writing</a></li>
-    <li><a href="media.html">Media</a></li>
-    <li><a href="cv.html">CV</a></li>
-    <li><a href="contact.html">Contact</a></li>
-
-  
   <div>
     <div class="footer-heading">Navigate</div>
     <ul class="footer-links">
