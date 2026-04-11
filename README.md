@@ -161,9 +161,12 @@
       position: relative;
       background: var(--cream);
       overflow: hidden;
-      display: flex; align-items: flex-end; justify-content: flex-end;
+      display: flex;
+      align-items: flex-end; 
+      justify-content: flex-end;
       padding: 3rem;
-      min-height: 752px;
+      /* Change min-height to a fixed height */
+      height: 550px; 
     }
    .hero-right img {
       position: absolute;
@@ -517,7 +520,7 @@
 
 <!-- Navigation -->
 <nav id="navbar">
-  <a href="polish.html" class="nav-logo"><span class="fi fi-pl"></span> Zmień język na polski</a>
+  <span class="fi fi-pl"></span><a href="polish.html" class="nav-logo"> Zmień język na polski</a>
   <ul class="nav-links">
     <li><a href="#"> </a></li>
     <li><a href="https://www.staniszewski.biz/">About</a></li>
