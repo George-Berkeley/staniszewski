@@ -141,6 +141,7 @@ min-height: auto;
     }
 .hero-actions {
   position: absolute; /* Ensure they appear over the background */
+  top: 600px;
   z-index: 2;
   display: flex; 
   gap: 1rem; 
