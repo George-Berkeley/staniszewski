@@ -193,7 +193,6 @@
       opacity: 0;
       animation: fadeUp .7s .4s forwards;
     }
-    }
     .hero-right-bg {
       position: absolute; inset: 0;
       background:
