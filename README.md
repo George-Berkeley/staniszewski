@@ -178,8 +178,7 @@
       object-fit: cover;        /* preserve aspect ratio; crop to fill */
       object-position: center top;
       display: block;
-      border: 5px solid black;
-    }
+   }
      .hero-name {
       position: absolute;
       bottom: 2rem;
