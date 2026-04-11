@@ -544,7 +544,7 @@
   </div>
   <div class="hero-right">
      <h1 class="hero-name">Bartek Staniszewski</h1>
-  <img src="https://i.imgur.com/VsjPWfd.png" style="border:5px solid black"/>
+  <img src="https://i.imgur.com/VsjPWfd.png"/>
   </div>
       <div class="hero-actions">
       <a href="#publications" class="btn btn-gold">Read my work</a>
