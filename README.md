@@ -139,15 +139,6 @@ min-height: auto;
       opacity: 0;
       animation: fadeUp .7s .4s forwards;
     }
-.hero-actions {
-  position: relative; /* Ensure they appear over the background */
-  z-index: 2;
-  display: flex; 
-  gap: 1rem; 
-  margin-top: 3rem; /* Space between the image/name and buttons */
-  opacity: 0;
-  animation: fadeUp .7s .55s forwards;
-}
     .btn {
       display: inline-block;
       padding: .7rem 1.8rem;
@@ -174,17 +165,27 @@ min-height: auto;
   align-items: flex-end; 
   justify-content: flex-end;
   padding: 3rem;
-  height: 550px;
+  height: auto;
 }
    .hero-right img {
-      position: absolute;
+      position: relative;
       inset: 0;           /* shorthand for top:0; right:0; bottom:0; left:0 */
       width: 100%;
-      height: 100%;
+      height: 550px;
       object-fit: cover;        /* preserve aspect ratio; crop to fill */
       object-position: center top;
       display: block;
    }
+    .hero-actions {
+  position: relative; /* Ensure they appear over the background */
+  z-index: 2;
+  display: flex; 
+  gap: 1rem; 
+  margin-top: 3rem; /* Space between the image/name and buttons */
+  opacity: 0;
+  padding: 1.5rem;
+  animation: fadeUp .7s .55s forwards;
+}
      .hero-name {
       position: absolute;
       bottom: 2rem;
