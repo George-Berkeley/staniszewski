@@ -140,12 +140,9 @@ min-height: auto;
       animation: fadeUp .7s .4s forwards;
     }
 .hero-actions {
-  position: absolute; /* Ensure they appear over the background */
-  top: 520px;
-  z-index: 2;
-  display: flex; 
-  gap: 1rem; 
-  margin-top: 3rem; /* Space between the image/name and buttons */
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;      /* space around the buttons */
   opacity: 0;
   animation: fadeUp .7s .55s forwards;
 }
@@ -166,26 +163,24 @@ min-height: auto;
     .btn-gold { border-color: var(--gold); color: var(--gold); }
     .btn-gold:hover { background: var(--gold); color: var(--paper); }
 
-   .hero-right {
+.hero-right {
   position: relative;
   background: var(--cream);
   overflow: hidden;
   display: flex;
-  flex-direction: column; /* Stack image and buttons vertically */
-  align-items: flex-end; 
-  justify-content: flex-end;
-  padding: 3rem;
-  height: 550px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0; /* remove padding so image goes edge-to-edge */
 }
-   .hero-right img {
-      position: absolute;
-      inset: 0;           /* shorthand for top:0; right:0; bottom:0; left:0 */
-      width: 100%;
-      height: 100%;
-      object-fit: cover;        /* preserve aspect ratio; crop to fill */
-      object-position: center top;
-      display: block;
-   }
+
+.hero-right img {
+  width: 100%;
+  height: 550px;        /* or whatever height you want */
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
      .hero-name {
       position: absolute;
       bottom: 2rem;
