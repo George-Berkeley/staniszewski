@@ -140,7 +140,7 @@ min-height: auto;
       animation: fadeUp .7s .4s forwards;
     }
 .hero-actions {
-  position: relative; /* Ensure they appear over the background */
+  position: absolute; /* Ensure they appear over the background */
   z-index: 2;
   display: flex; 
   gap: 1rem; 
