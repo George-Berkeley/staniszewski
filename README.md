@@ -183,7 +183,7 @@ min-height: auto;
 }
      .hero-name {
       position: absolute;
-      bottom: 2rem;
+      bottom: calc(2rem - 10px)
       left: 2rem;
       z-index: 1;
       font-family: var(--serif);
@@ -561,8 +561,8 @@ min-height: auto;
     <h1 class="hero-name">Bartek Staniszewski</h1>
   </div>
   <div class="hero-actions">
-    <a href="#publications" class="btn btn-gold">Read my work</a>
-    <a href="#cv" class="btn">View CV</a>
+    <a href="https://www.staniszewski.biz/writing.html" class="btn btn-gold">Read my work</a>
+    <a href="https://www.staniszewski.biz/cv.html" class="btn">View CV</a>
   </div>
 </div>
 </section>
@@ -570,10 +570,10 @@ min-height: auto;
 <!-- Publications -->
 <section id="publications">
   <div class="section-header reveal">
-    <div class="section-number">01</div>
+    <div class="section-number"></div>
     <div class="section-title-block">
-      <h2>Publications</h2>
-      <p>Books, essays & academic papers</p>
+      <h2>Writing highlights</h2>
+      <p>Reports, articles & analyses</p>
     </div>
   </div>
 
