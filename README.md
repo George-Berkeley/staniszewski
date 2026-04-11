@@ -570,7 +570,7 @@ min-height: auto;
 <!-- Publications -->
 <section id="publications">
   <div class="section-header reveal">
-    <div class="section-number"></div>
+    <div class="section-number">Writing highlights</div>
     <div class="section-title-block">
       <h2>Writing highlights</h2>
       <p>Reports, articles & analyses</p>
