@@ -582,7 +582,7 @@ min-height: auto;
       <div class="pub-year">2025</div>
       <div class="pub-title">Mending the net? A new centre-right approach to social security</div>
       <div class="pub-venue">Bright Blue</div>
-      <div class="pub-desc"I edited and wrote the introduction to this collection of essays on reforming social security in the UK. Featuring also contributions from Danny Kruger, Henry Hill, David Goodhart, John Glen, and others.</div>
+      <div class="pub-desc">I edited and wrote the introduction to this collection of essays on reforming social security in the UK. Featuring also contributions from Danny Kruger, Henry Hill, David Goodhart, John Glen, and others.</div>
       <span class="pub-arrow">Read more →</span>
     </a>
 
