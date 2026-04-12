@@ -636,17 +636,17 @@ min-height: auto;
   <div class="section-header reveal">
     <div class="section-number">02</div>
     <div class="section-title-block">
-      <h2>Television & Media</h2>
+      <h2>Select recent work</h2>
       <p>Appearances, panels & documentary work</p>
     </div>
   </div>
 
   <div class="tv-list">
     <a href="#" class="tv-item reveal">
-      <div class="tv-date">Mar 2025</div>
+      <div class="tv-date">2025</div>
       <div class="tv-body">
-        <div class="tv-show">Newsnight</div>
-        <div class="tv-topic">On the European security situation and NATO's eastern flank</div>
+        <div class="tv-show">Mending the net? A new centre-right approach to social security</div>
+        <div class="tv-topic">Bright Blue</div>
       </div>
       <div class="tv-channel">BBC Two</div>
     </a>
