@@ -634,7 +634,7 @@ min-height: auto;
 <!-- TV Appearances -->
 <section id="tv">
   <div class="section-header reveal">
-    <div class="section-number">02</div>
+    <div class="section-number"></div>
     <div class="section-title-block">
       <h2>Select recent work</h2>
       <p>Appearances, panels & documentary work</p>
