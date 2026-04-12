@@ -295,7 +295,7 @@ min-height: auto;
       gap: 2px;
     }
     .pub-card {
-      background: var(--paper);
+      background: var(--muted);
       padding: 2.2rem;
       border-left: 2px solid transparent;
       transition: border-color .2s, background .2s;
@@ -303,7 +303,7 @@ min-height: auto;
       color: inherit;
       display: block;
     }
-    section:nth-child(even) .pub-card { background: var(--paper); }
+    section:nth-child(even) .pub-card { background: var(--muted); }
     .pub-card:hover { border-left-color: var(--gold); }
     .pub-year {
       font-size: .7rem;
@@ -323,12 +323,12 @@ min-height: auto;
       font-family: var(--serif);
       font-size: .95rem;
       font-style: italic;
-      color: var(--muted);
+      color: var(--paper);
       margin-bottom: .8rem;
     }
     .pub-desc {
       font-size: .82rem;
-      color: var(--muted);
+      color: var(--paper);
       line-height: 1.6;
     }
     .pub-arrow {
