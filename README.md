@@ -643,12 +643,12 @@ min-height: auto;
 
   <div class="tv-list">
     <a href="#" class="tv-item reveal">
-      <div class="tv-date">2025</div>
+      <div class="tv-date">Oct 2025</div>
       <div class="tv-body">
-        <div class="tv-show">Mending the net? A new centre-right approach to social security</div>
-        <div class="tv-topic">Bright Blue</div>
+        <div class="tv-show">Mending the net?</div>
+        <div class="tv-topic">A new centre-right approach to social security</div>
       </div>
-      <div class="tv-channel">BBC Two</div>
+      <div class="tv-channel">Bright Blue</div>
     </a>
     <a href="#" class="tv-item reveal">
       <div class="tv-date">Jan 2025</div>
