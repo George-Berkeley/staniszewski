@@ -561,8 +561,8 @@ min-height: auto;
     <h1 class="hero-name">Bartek Staniszewski</h1>
   </div>
   <div class="hero-actions">
-    <a href="#publications" class="btn btn-gold">Read my work</a>
-    <a href="#cv" class="btn">View CV</a>
+    <a href="https://www.staniszewski.biz/writing.html" class="btn btn-gold">Read my work</a>
+    <a href="https://www.staniszewski.biz/cv.html" class="btn">View my CV</a>
   </div>
 </div>
 </section>
@@ -570,61 +570,62 @@ min-height: auto;
 <!-- Publications -->
 <section id="publications">
   <div class="section-header reveal">
-    <div class="section-number">01</div>
+    <div class="section-number">Select recent work</div>
     <div class="section-title-block">
-      <h2>Publications</h2>
-      <p>Books, essays & academic papers</p>
+      <h2></h2>
+      <p>Reports, articles and talks</p>
     </div>
   </div>
 
   <div class="publications-grid">
-    <a href="#" class="pub-card reveal">
+    <a href="https://www.brightblue.org.uk/wp-content/uploads/2025/10/BB-Essay-Collection-August-2025_PRF04.pdf" class="pub-card reveal">
+      <div class="pub-year">2025</div>
+      <div class="pub-title">Mending the net? A new centre-right approach to social security</div>
+      <div class="pub-venue">Bright Blue</div>
+      <div class="pub-desc"I edited and wrote the introduction to this collection of essays on reforming social security in the UK. Featuring also contributions from Danny Kruger, Henry Hill, David Goodhart, John Glen, and others.</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+
+    <a href="https://centrewrite.brightblue.org.uk/interview-with-mel-stride/" class="pub-card reveal">
+      <div class="pub-year">2025</div>
+      <div class="pub-title">Interview with Mel Stride</div>
+      <div class="pub-venue">Centre Write</div>
+      <div class="pub-desc">I interviewed the Rt Hon Mel Stride MP, the Shadow Chancellor of the Exchquer, for the launch of the Centre Write magazine.</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+
+    <a href="https://www.brightblue.org.uk/portfolio/right-road/" class="pub-card reveal">
+      <div class="pub-year">2025</div>
+      <div class="pub-title">The right road: The future of the European centre-right</div>
+      <div class="pub-venue">Bright Blue</div>
+      <div class="pub-desc">I wrote most of the chapters in this book about the past and future of the European centre-right.</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+
+    <a href="https://spectator.com/article/its-time-to-tackle-britains-health-and-safety-obsession/" class="pub-card reveal">
+      <div class="pub-year">2025</div>
+      <div class="pub-title">Red tape has broken Britain</div>
+      <div class="pub-venue">The Spectator</div>
+      <div class="pub-desc">An article on a true cause behind the collapse of the social contract in the UK.</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+
+    <a href="https://spectator.com/article/autists-are-the-answer-to-britains-worklessness-crisis/" class="pub-card reveal">
+      <div class="pub-year">2025</div>
+      <div class="pub-title">Autists are the answer to Britain’s worklessness crisis</div>
+      <div class="pub-venue">The Spectator</div>
+      <div class="pub-desc">An article on the interaction between the UK's autistic population and the benefit claimant system.</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+
+    <a href="https://thecritic.co.uk/not-everyone-should-be-in-therapy/" class="pub-card reveal">
       <div class="pub-year">2024</div>
-      <div class="pub-title">The Unfinished Century: Europe After the Wars</div>
-      <div class="pub-venue">Allen Lane / Penguin Press</div>
-      <div class="pub-desc">A reappraisal of twentieth-century European history and what it means for the crises of today.</div>
+      <div class="pub-title">Not everyone should be in therapy</div>
+      <div class="pub-venue">The Critic</div>
+      <div class="pub-desc">An article on the prevalence of and problems with therapy culture.</div>
       <span class="pub-arrow">Read more →</span>
     </a>
 
-    <a href="#" class="pub-card reveal">
-      <div class="pub-year">2022</div>
-      <div class="pub-title">Borderlands: A Journey Through Forgotten Europe</div>
-      <div class="pub-venue">Faber & Faber</div>
-      <div class="pub-desc">Longlisted for the Baillie Gifford Prize. A reportage across the margins of the continent.</div>
-      <span class="pub-arrow">Read more →</span>
-    </a>
-
-    <a href="#" class="pub-card reveal">
-      <div class="pub-year">2020</div>
-      <div class="pub-title">The Memory of Nations</div>
-      <div class="pub-venue">Yale University Press</div>
-      <div class="pub-desc">How societies remember — and misremember — collective trauma. Winner of the Historians' Book Prize.</div>
-      <span class="pub-arrow">Read more →</span>
-    </a>
-
-    <a href="#" class="pub-card reveal">
-      <div class="pub-year">2019</div>
-      <div class="pub-title">After the Fall — Essay Collection</div>
-      <div class="pub-venue">The Guardian / New York Review of Books</div>
-      <div class="pub-desc">A selection of long-form essays on politics, culture, and historical memory published across major outlets.</div>
-      <span class="pub-arrow">Read more →</span>
-    </a>
-
-    <a href="#" class="pub-card reveal">
-      <div class="pub-year">2017</div>
-      <div class="pub-title">Ghosts of the Republic</div>
-      <div class="pub-venue">Oxford University Press</div>
-      <div class="pub-desc">Academic monograph on the contested legacies of interwar Central European states.</div>
-      <span class="pub-arrow">Read more →</span>
-    </a>
-
-    <a href="#" class="pub-card reveal">
-      <div class="pub-year">2015</div>
-      <div class="pub-title">Writing the Present: Dispatches from a Correspondent</div>
-      <div class="pub-venue">Granta Books</div>
-      <div class="pub-desc">Journalism and memoir from two decades of reporting from conflict zones and post-communist transitions.</div>
-      <span class="pub-arrow">Read more →</span>
-    </a>
   </div>
 </section>
 
