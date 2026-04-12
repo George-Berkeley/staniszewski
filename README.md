@@ -180,6 +180,8 @@ min-height: auto;
   object-fit: cover;
   object-position: center top;
   display: block;
+  outline: 5px solid var(--green); /* Your golden border */
+  outline-offset: -5px;           /* Pulls the border inside the image */
 }
      .hero-name {
       position: absolute;
