@@ -48,6 +48,31 @@
     }
     a:hover ~ .cursor, a:hover .cursor { width: 20px; height: 20px; }
 
+    .filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  margin-bottom: 2.5rem;
+}
+.filter-btn {
+  font-family: var(--sans);
+  font-size: .72rem;
+  font-weight: 500;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .45rem 1.1rem;
+  border: 1px solid var(--rule);
+  background: transparent;
+  color: var(--muted);
+  cursor: none;
+  transition: background .2s, color .2s, border-color .2s;
+}
+.filter-btn:hover  { border-color: var(--gold); color: var(--gold); }
+.filter-btn.active { background: var(--gold); border-color: var(--gold); color: var(--paper); }
+
+.pub-card { transition: border-color .2s, background .2s, opacity .25s, transform .25s; }
+.pub-card.hidden  { display: none; }
+
     /* ── Nav ── */
     nav {
       position: fixed; top: 0; left: 0; right: 0;
@@ -558,9 +583,17 @@ min-height: auto;
     </div>
   </div>
 
+<div class="filter-bar reveal">
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="bright-blue">Reports &amp; books</button>
+  <button class="filter-btn" data-filter="articles">Articles</button>
+  <button class="filter-btn" data-filter="interviews">Interviews</button>
+  <button class="filter-btn" data-filter="collections">Edited collections</button>
+</div>
+  
 <div class="publications-grid">
 
-    <a href="https://www.brightblue.org.uk/portfolio/higher-ground-living-standards/" class="pub-card reveal">
+    <a href="https://www.brightblue.org.uk/portfolio/higher-ground-living-standards/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Mar 2026</div>
       <div class="pub-title">Higher ground: A centre-right vision to raise living standards</div>
       <div class="pub-venue">Bright Blue</div>
@@ -568,7 +601,7 @@ min-height: auto;
       <span class="pub-arrow">Read more →</span>
     </a> 
   
-  <a href="https://thecritic.co.uk/polish-lessons-for-the-british-right/" class="pub-card reveal">
+  <a href="https://thecritic.co.uk/polish-lessons-for-the-british-right/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Feb 2026</div>
       <div class="pub-title">Polish lessons for the British right</div>
       <div class="pub-venue">The Critic</div>
@@ -576,7 +609,7 @@ min-height: auto;
       <span class="pub-arrow">Read more →</span>
     </a>
 
-      <a href="https://thecritic.co.uk/britain-is-failing-the-toilet-test/" class="pub-card reveal">
+      <a href="https://thecritic.co.uk/britain-is-failing-the-toilet-test/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Jan 2026</div>
       <div class="pub-title">Britain is failing the toilet test</div>
       <div class="pub-venue">The Critic</div>
@@ -584,14 +617,14 @@ min-height: auto;
       <span class="pub-arrow">Read more →</span>
     </a>
 
-        <a href="https://spectator.com/article/its-time-to-tackle-britains-health-and-safety-obsession/" class="pub-card reveal">
+        <a href="https://spectator.com/article/its-time-to-tackle-britains-health-and-safety-obsession/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Nov 2025</div>
       <div class="pub-title">Red tape has broken Britain</div>
       <div class="pub-venue">The Spectator</div>
       <span class="pub-arrow">Read more →</span>
     </a>
   
-  <a href="https://www.brightblue.org.uk/wp-content/uploads/2025/10/BB-Essay-Collection-August-2025_PRF04.pdf" class="pub-card reveal">
+  <a href="https://www.brightblue.org.uk/wp-content/uploads/2025/10/BB-Essay-Collection-August-2025_PRF04.pdf" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Oct 2025</div>
       <div class="pub-title">Mending the net? A new centre-right approach to social security</div>
       <div class="pub-venue">Bright Blue</div>
@@ -599,7 +632,7 @@ min-height: auto;
       <span class="pub-arrow">Read more →</span>
     </a>
 
-    <a href="https://centrewrite.brightblue.org.uk/interview-with-mel-stride/" class="pub-card reveal">
+    <a href="https://centrewrite.brightblue.org.uk/interview-with-mel-stride/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Oct 2025</div>
       <div class="pub-title">Interview with Mel Stride</div>
       <div class="pub-venue">Centre Write</div>
@@ -608,7 +641,7 @@ min-height: auto;
     </a>
 
 
-    <a href="https://conservativehome.com/2025/09/19/bartek-staniszewski-kruger-is-a-loss-to-the-conservatives-but-his-christian-philosophy-may-not-find-the-same-home-in-reform/" class="pub-card reveal">
+    <a href="https://conservativehome.com/2025/09/19/bartek-staniszewski-kruger-is-a-loss-to-the-conservatives-but-his-christian-philosophy-may-not-find-the-same-home-in-reform/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Sep 2025</div>
       <div class="pub-title">Kruger is a loss to the Conservatives but his Christian philosophy may not find the same home in Reform</div>
       <div class="pub-venue">Conservative Home</div>
@@ -616,35 +649,35 @@ min-height: auto;
       <span class="pub-arrow">Read more →</span>
     </a>
 
-      <a href="https://spectator.com/article/autists-are-the-answer-to-britains-worklessness-crisis/" class="pub-card reveal">
+      <a href="https://spectator.com/article/autists-are-the-answer-to-britains-worklessness-crisis/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Sep 2025</div>
       <div class="pub-title">Autists are the answer to Britain’s worklessness crisis</div>
       <div class="pub-venue">The Spectator</div>
       <span class="pub-arrow">Read more →</span>
     </a>
   
-    <a href="https://thecritic.co.uk/the-problem-of-online-ugliness/" class="pub-card reveal">
+    <a href="https://thecritic.co.uk/the-problem-of-online-ugliness/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Jul 2025</div>
       <div class="pub-title">The problem of online ugliness</div>
       <div class="pub-venue">The Critic</div>
       <span class="pub-arrow">Read more →</span>
     </a>
 
-      <a href="https://www.yorkshirepost.co.uk/news/opinion/columnists/the-chancellors-leeds-reforms-are-a-step-in-the-right-direction-but-more-needs-to-be-done-bartek-staniszewski-5232148" class="pub-card reveal">
+      <a href="https://www.yorkshirepost.co.uk/news/opinion/columnists/the-chancellors-leeds-reforms-are-a-step-in-the-right-direction-but-more-needs-to-be-done-bartek-staniszewski-5232148" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Jul 2025</div>
       <div class="pub-title">The Chancellor’s Leeds Reforms are a step in the right direction but more needs to be done</div>
       <div class="pub-venue">The Yorkshire Post</div>
       <span class="pub-arrow">Read more →</span>
     </a>
 
-    <a href="https://spectator.com/article/why-conservatives-should-embrace-their-christian-heritage/" class="pub-card reveal">
+    <a href="https://spectator.com/article/why-conservatives-should-embrace-their-christian-heritage/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Jun 2025</div>
       <div class="pub-title">Why conservatives should embrace their Christian heritage</div>
       <div class="pub-venue">The Spectator</div>
       <span class="pub-arrow">Read more →</span>
     </a>
   
-    <a href="https://www.brightblue.org.uk/portfolio/right-road/" class="pub-card reveal">
+    <a href="https://www.brightblue.org.uk/portfolio/right-road/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Jun 2025</div>
       <div class="pub-title">The right road: The future of the European centre-right</div>
       <div class="pub-venue">Bright Blue</div>
@@ -652,35 +685,35 @@ min-height: auto;
       <span class="pub-arrow">Read more →</span>
     </a>
 
-    <a href="https://spectator.com/article/what-karol-nawrockis-triumph-means-for-poland/" class="pub-card reveal">
+    <a href="https://spectator.com/article/what-karol-nawrockis-triumph-means-for-poland/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Jun 2025</div>
       <div class="pub-title">What Karol Nawrocki’s triumph means for Poland</div>
       <div class="pub-venue">The Spectator</div>
       <span class="pub-arrow">Read more →</span>
     </a>
 
-    <a href="https://www.cityam.com/why-dont-we-mutualise-british-steel/" class="pub-card reveal">
+    <a href="https://www.cityam.com/why-dont-we-mutualise-british-steel/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Apr 2025</div>
       <div class="pub-title">Why don't we mutualise British Steel?</div>
       <div class="pub-venue">City AM</div>
       <span class="pub-arrow">Read more →</span>
     </a>
 
-    <a href="https://capx.co/the-centre-right-is-still-our-best-bet-for-prosperity/" class="pub-card reveal">
+    <a href="https://capx.co/the-centre-right-is-still-our-best-bet-for-prosperity/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Apr 2025</div>
       <div class="pub-title">The centre-right is still our best bet for prosperity</div>
       <div class="pub-venue">CapX</div>
       <span class="pub-arrow">Read more →</span>
     </a>
 
-      <a href="https://conservativehome.com/2025/03/20/bartek-staniszewski-a-party-without-a-clear-philosophy-is-not-going-to-win-votes-just-look-around-europe/" class="pub-card reveal">
+      <a href="https://conservativehome.com/2025/03/20/bartek-staniszewski-a-party-without-a-clear-philosophy-is-not-going-to-win-votes-just-look-around-europe/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Mar 2025</div>
       <div class="pub-title">A party without a clear philosophy is not going to win votes – just look around Europe</div>
       <div class="pub-venue">Conservative Home</div>
       <span class="pub-arrow">Read more →</span>
     </a>
   
-      <a href="https://thecritic.co.uk/the-case-for-more-kids/" class="pub-card reveal">
+      <a href="https://thecritic.co.uk/the-case-for-more-kids/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Feb 2025</div>
       <div class="pub-title">The case for more kids</div>
       <div class="pub-venue">The Critic</div>
@@ -688,273 +721,273 @@ min-height: auto;
     </a>
   
   
-      <a href="https://www.cityam.com/faith-has-a-place-in-politics/" class="pub-card reveal">
+      <a href="https://www.cityam.com/faith-has-a-place-in-politics/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Dec 2024</div>
       <div class="pub-title">Faith has a place in politics</div>
       <div class="pub-venue">City AM</div>
       <span class="pub-arrow">Read more →</span>
     </a>
   
-      <a href="https://www.yorkshirepost.co.uk/news/opinion/columnists/labours-distaste-towards-beauty-risks-undermining-its-drive-to-build-more-homes-bartek-staniszewski-4874136" class="pub-card reveal">
+      <a href="https://www.yorkshirepost.co.uk/news/opinion/columnists/labours-distaste-towards-beauty-risks-undermining-its-drive-to-build-more-homes-bartek-staniszewski-4874136" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Nov 2024</div>
       <div class="pub-title">Labour’s distaste towards ‘beauty’ risks undermining its drive to build more homes</div>
       <div class="pub-venue">The Yorkshire Post</div>
       <span class="pub-arrow">Read more →</span>
     </a>
   
-      <a href="https://www.brightblue.org.uk/portfolio/generation-ai/" class="pub-card reveal">
+      <a href="https://www.brightblue.org.uk/portfolio/generation-ai/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Nov 2024</div>
       <div class="pub-title">Harbingers of the end times?</div>
       <div class="pub-venue">Centre Write</div>
       <span class="pub-arrow">Read more →</span>
     </a>
   
-      <a href="https://thecritic.co.uk/trump-post-modernist/" class="pub-card reveal">
+      <a href="https://thecritic.co.uk/trump-post-modernist/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Nov 2024</div>
       <div class="pub-title">Trump: Post-Modernist?</div>
       <div class="pub-venue">The Critic</div>
       <span class="pub-arrow">Read more →</span>
     </a>
   
-      <a href="https://capx.co/assisted-dying-is-an-affront-against-human-liberty" class="pub-card reveal">
+      <a href="https://capx.co/assisted-dying-is-an-affront-against-human-liberty" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Oct 2024</div>
       <div class="pub-title">Assisted dying is an affront against human liberty</div>
       <div class="pub-venue">CapX</div>
       <span class="pub-arrow">Read more →</span>
     </a>
   
-      <a href="https://thecritic.co.uk/not-everyone-should-be-in-therapy/" class="pub-card reveal">
+      <a href="https://thecritic.co.uk/not-everyone-should-be-in-therapy/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Aug 2024</div>
       <div class="pub-title">Not everyone should be in therapy</div>
       <div class="pub-venue">The Critic</div>
       <span class="pub-arrow">Read more →</span>
     </a>
   
-      <a href="https://www.yorkshirepost.co.uk/news/opinion/columnists/labours-housing-targets-are-the-least-ambitious-but-most-realistic-bartek-staniszewski-4690022" class="pub-card reveal">
+      <a href="https://www.yorkshirepost.co.uk/news/opinion/columnists/labours-housing-targets-are-the-least-ambitious-but-most-realistic-bartek-staniszewski-4690022" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Jul 2024</div>
       <div class="pub-title">Labour's housing targets are the least ambitious but most realistic</div>
       <div class="pub-venue">The Yorkshire Post</div>
       <span class="pub-arrow">Read more →</span>
     </a>
   
-      <a href="https://www.brightblue.org.uk/portfolio/great-expectations-public-perceptions-and-expectations-for-the-new-government/" class="pub-card reveal">
+      <a href="https://www.brightblue.org.uk/portfolio/great-expectations-public-perceptions-and-expectations-for-the-new-government/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Jul 2024</div>
       <div class="pub-title">Great expectations? Public perceptions and expectations for the new Government</div>
       <div class="pub-venue">Bright Blue</div>
       <span class="pub-arrow">Read more →</span>
     </a>
   
-      <a href="https://thecritic.co.uk/the-soullessness-of-social-mobility/" class="pub-card reveal">
+      <a href="https://thecritic.co.uk/the-soullessness-of-social-mobility/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Jun 2024</div>
       <div class="pub-title">The soullessness of “social mobility”</div>
       <div class="pub-venue">The Critic</div>
       <span class="pub-arrow">Read more →</span>
     </a>
   
-      <a href="https://www.yorkshirepost.co.uk/news/opinion/columnists/youve-heard-of-nimbys-but-its-the-bananas-that-are-the-real-problem-holding-the-country-back-bartek-staniszewski-4627323" class="pub-card reveal">
+      <a href="https://www.yorkshirepost.co.uk/news/opinion/columnists/youve-heard-of-nimbys-but-its-the-bananas-that-are-the-real-problem-holding-the-country-back-bartek-staniszewski-4627323" class="pub-card reveal" data-type="articles">
       <div class="pub-year">May 2024</div>
       <div class="pub-title">You’ve heard of NIMBYs but it’s the BANANAs that are the real problem holding the country back</div>
       <div class="pub-venue">The Yorkshire Post</div>
       <span class="pub-arrow">Read more →</span>
     </a>
   
-      <a href="https://conservativehome.com/2024/04/22/bartek-staniszewski-under-khan-rough-sleeping-in-london-has-got-worse-his-promises-lack-credibility/" class="pub-card reveal">
+      <a href="https://conservativehome.com/2024/04/22/bartek-staniszewski-under-khan-rough-sleeping-in-london-has-got-worse-his-promises-lack-credibility/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Apr 2024</div>
       <div class="pub-title">Under Khan, rough sleeping in London has got worse. His promises lack credibility.</div>
       <div class="pub-venue">Conservative Home</div>
       <span class="pub-arrow">Read more →</span>
     </a>
   
-      <a href="https://thecritic.co.uk/katharine-birbalsingh-is-wrong-about-religion-in-schools/" class="pub-card reveal">
+      <a href="https://thecritic.co.uk/katharine-birbalsingh-is-wrong-about-religion-in-schools/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Apr 2024</div>
       <div class="pub-title">Katharine Birbalsingh is wrong about religion in schools</div>
       <div class="pub-venue">The Critic</div>
       <span class="pub-arrow">Read more →</span>
     </a>
   
-      <a href="https://www.yorkshirepost.co.uk/news/opinion/columnists/construction-and-nature-dont-need-to-be-set-up-as-competing-interests-tony-juniper-bartek-staniszewski-4563253" class="pub-card reveal">
+      <a href="https://www.yorkshirepost.co.uk/news/opinion/columnists/construction-and-nature-dont-need-to-be-set-up-as-competing-interests-tony-juniper-bartek-staniszewski-4563253" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Mar 2024</div>
       <div class="pub-title">Construction and nature don’t need to be set up as competing interests</div>
       <div class="pub-venue">The Yorkshire Post</div>
       <span class="pub-arrow">Read more →</span>
     </a>
   
-      <a href="https://www.brightblue.org.uk/portfolio/greater-and-greener-development-polling/" class="pub-card reveal">
+      <a href="https://www.brightblue.org.uk/portfolio/greater-and-greener-development-polling/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Mar 2024</div>
       <div class="pub-title">Greater and greener development</div>
       <div class="pub-venue">Bright Blue</div>
       <span class="pub-arrow">Read more →</span>
     </a>
   
-      <a href="https://spectator.com/article/britains-adoration-of-the-nhs-is-nothing-to-celebrate/" class="pub-card reveal">
+      <a href="https://spectator.com/article/britains-adoration-of-the-nhs-is-nothing-to-celebrate/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Mar 2024</div>
       <div class="pub-title">Britain’s adoration of the NHS is nothing to celebrate</div>
       <div class="pub-venue">The Spectator</div>
       <span class="pub-arrow">Read more →</span>
     </a>
   
-      <a href="https://www.insidehousing.co.uk/comment/estate-regeneration-is-crucial-to-solving-the-housing-crisis-85171" class="pub-card reveal">
+      <a href="https://www.insidehousing.co.uk/comment/estate-regeneration-is-crucial-to-solving-the-housing-crisis-85171" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Feb 2024</div>
       <div class="pub-title">Estate regeneration is crucial to solving the housing crisis</div>
       <div class="pub-venue">Inside Housing</div>
       <span class="pub-arrow">Read more →</span>
     </a>
   
-      <a href="https://www.cityam.com/with-uk-dividends-disappearing-overseas-its-time-to-resurrect-employee-ownership/" class="pub-card reveal">
+      <a href="https://www.cityam.com/with-uk-dividends-disappearing-overseas-its-time-to-resurrect-employee-ownership/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Feb 2024</div>
       <div class="pub-title">With UK dividends disappearing overseas, it’s time to resurrect employee ownership</div>
       <div class="pub-venue">City AM</div>
       <span class="pub-arrow">Read more →</span>
     </a>
   
-      <a href="https://conservativehome.com/2024/02/05/bartek-staniszewski-businesses-should-help-local-democracy-to-flourish/" class="pub-card reveal">
+      <a href="https://conservativehome.com/2024/02/05/bartek-staniszewski-businesses-should-help-local-democracy-to-flourish/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Feb 2024</div>
       <div class="pub-title">Businesses should help local democracy to flourish</div>
       <div class="pub-venue">Conservative Home</div>
       <span class="pub-arrow">Read more →</span>
     </a>
   
-      <a href="https://www.brightblue.org.uk/portfolio/mind-your-business-expanding-democratic-business-in-the-uk/" class="pub-card reveal">
+      <a href="https://www.brightblue.org.uk/portfolio/mind-your-business-expanding-democratic-business-in-the-uk/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Jan 2024</div>
       <div class="pub-title">Mind your business? Expanding democratic business in the UK</div>
       <div class="pub-venue">Bright Blue</div>
       <span class="pub-arrow">Read more →</span>
     </a>
   
-      <a href="https://www.businessgreen.com/opinion/4161092/developments-beautiful-green" class="pub-card reveal">
+      <a href="https://www.businessgreen.com/opinion/4161092/developments-beautiful-green" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Jan 2024</div>
       <div class="pub-title">To make developments beautiful, make them green</div>
       <div class="pub-venue">BusinessGreen</div>
       <span class="pub-arrow">Read more →</span>
     </a>
   
-      <a href="https://www.yorkshirepost.co.uk/news/opinion/columnists/the-housing-crisis-wont-be-tackled-unless-we-build-on-the-green-belt-bartek-staniszewski-4420013" class="pub-card reveal">
+      <a href="https://www.yorkshirepost.co.uk/news/opinion/columnists/the-housing-crisis-wont-be-tackled-unless-we-build-on-the-green-belt-bartek-staniszewski-4420013" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Nov 2023</div>
       <div class="pub-title">The housing crisis won’t be tackled unless we build on the green belt</div>
       <div class="pub-venue">The Yorkshire Post</div>
       <span class="pub-arrow">Read more →</span>
     </a>
   
-      <a href="https://conservativehome.com/2023/11/10/bartek-staniszewski-rent-controls-have-increased-homelessness-in-edinburgh/" class="pub-card reveal">
+      <a href="https://conservativehome.com/2023/11/10/bartek-staniszewski-rent-controls-have-increased-homelessness-in-edinburgh/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Nov 2023</div>
       <div class="pub-title">Rent controls have increased homelessness in Edinburgh</div>
       <div class="pub-venue">Conservative Home</div>
       <span class="pub-arrow">Read more →</span>
     </a>
   
-      <a href="https://capx.co/rent-controls-have-failed-everywhere-and-edinburgh-is-no-different" class="pub-card reveal">
+      <a href="https://capx.co/rent-controls-have-failed-everywhere-and-edinburgh-is-no-different" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Nov 2023</div>
       <div class="pub-title">Rent controls have failed everywhere – and Edinburgh is no different</div>
       <div class="pub-venue">CapX</div>
       <span class="pub-arrow">Read more →</span>
     </a>
   
-      <a href="https://www.cityam.com/even-if-we-do-abolish-no-fault-evictions-renters-are-still-at-risk-of-being-kicked-out/" class="pub-card reveal">
+      <a href="https://www.cityam.com/even-if-we-do-abolish-no-fault-evictions-renters-are-still-at-risk-of-being-kicked-out/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Oct 2023</div>
       <div class="pub-title">Even if we do abolish no fault evictions, renters are still at risk of being kicked out</div>
       <div class="pub-venue">City AM</div>
       <span class="pub-arrow">Read more →</span>
     </a>
   
-      <a href="https://www.brightblue.org.uk/portfolio/public-attitudes-towards-the-plight-of-and-policies-for-younger-people/" class="pub-card reveal">
+      <a href="https://www.brightblue.org.uk/portfolio/public-attitudes-towards-the-plight-of-and-policies-for-younger-people/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Oct 2023</div>
       <div class="pub-title">Public attitudes towards the plight of and policies for younger people</div>
       <div class="pub-venue">Bright Blue</div>
       <span class="pub-arrow">Read more →</span>
     </a>
   
-      <a href="https://conservativehome.com/2023/09/18/bartek-staniszewski-stopping-new-homes-is-the-wrong-way-to-avoid-water-pollution/" class="pub-card reveal">
+      <a href="https://conservativehome.com/2023/09/18/bartek-staniszewski-stopping-new-homes-is-the-wrong-way-to-avoid-water-pollution/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Sep 2023</div>
       <div class="pub-title">Stopping new homes is the wrong way to avoid water pollution</div>
       <div class="pub-venue">Conservative Home</div>
       <span class="pub-arrow">Read more →</span>
     </a>
   
-      <a href="https://www.brightblue.org.uk/portfolio/back-to-business/" class="pub-card reveal">
+      <a href="https://www.brightblue.org.uk/portfolio/back-to-business/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Aug 2023</div>
       <div class="pub-title">Back to business?</div>
       <div class="pub-venue">Centre Write</div>
       <span class="pub-arrow">Read more →</span>
     </a>
 
-        <a href="https://centrewrite.brightblue.org.uk/bartek-staniszewski-the-governments-housing-strategy-left-too-many-things-unsaid/" class="pub-card reveal">
+        <a href="https://centrewrite.brightblue.org.uk/bartek-staniszewski-the-governments-housing-strategy-left-too-many-things-unsaid/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Jul 2023</div>
       <div class="pub-title">The Government’s housing strategy leaves too many things unsaid</div>
       <div class="pub-venue">Centre Write</div>
       <span class="pub-arrow">Read more →</span>
     </a>
   
-        <a href="https://www.propertychronicle.com/home-advantage-a-new-centre-right-vision-for-housing/" class="pub-card reveal">
+        <a href="https://www.propertychronicle.com/home-advantage-a-new-centre-right-vision-for-housing/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Jun 2023</div>
       <div class="pub-title">Home Advantage: A new centre-right vision for housing</div>
       <div class="pub-venue">Property Chronicle</div>
       <span class="pub-arrow">Read more →</span>
     </a>
 
-          <a href="https://www.propertychronicle.com/the-housing-crisis-is-worst-in-cities-but-there-are-ways-to-make-it-better/" class="pub-card reveal">
+          <a href="https://www.propertychronicle.com/the-housing-crisis-is-worst-in-cities-but-there-are-ways-to-make-it-better/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">May 2023</div>
       <div class="pub-title">The housing crisis is worst in cities – but there are ways to make it better</div>
       <div class="pub-venue">Property Chronicle</div>
       <span class="pub-arrow">Read more →</span>
     </a>
 
-        <a href="https://conservativehome.com/2023/05/16/bartek-staniszewski-reducing-the-demand-for-government-1-families-the-crucial-role-of-housing-and-childcare/" class="pub-card reveal">
+        <a href="https://conservativehome.com/2023/05/16/bartek-staniszewski-reducing-the-demand-for-government-1-families-the-crucial-role-of-housing-and-childcare/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">May 2023</div>
       <div class="pub-title">Reducing the demand for government 1) Families. The crucial role of housing and childcare.</div>
       <div class="pub-venue">Conservative Home</div>
       <span class="pub-arrow">Read more →</span>
     </a>
 
-          <a href="https://www.propertychronicle.com/communities-and-housing-need-not-be-enemies/" class="pub-card reveal">
+          <a href="https://www.propertychronicle.com/communities-and-housing-need-not-be-enemies/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">May 2023</div>
       <div class="pub-title">Communities and housing need not be enemies</div>
       <div class="pub-venue">Property Chronicle</div>
       <span class="pub-arrow">Read more →</span>
     </a>
 
-          <a href="https://www.propertychronicle.com/too-many-lack-the-security-of-a-good-home/" class="pub-card reveal">
+          <a href="https://www.propertychronicle.com/too-many-lack-the-security-of-a-good-home/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">May 2023</div>
       <div class="pub-title">Too Many Lack the Security of a Good Home</div>
       <div class="pub-venue">Property Chronicle</div>
       <span class="pub-arrow">Read more →</span>
     </a>
   
-      <a href="https://www.brightblue.org.uk/portfolio/home-advantage-a-new-centre-right-vison-for-housing/" class="pub-card reveal">
+      <a href="https://www.brightblue.org.uk/portfolio/home-advantage-a-new-centre-right-vison-for-housing/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Apr 2023</div>
       <div class="pub-title">Home advantage: a new centre-right vision for housing</div>
       <div class="pub-venue">Bright Blue</div>
       <span class="pub-arrow">Read more →</span>
     </a>
   
-      <a href="https://conservativehome.com/2023/03/07/bartek-staniszewski-labour-promises-a-new-deal-on-housing-but-fails-the-key-challenge-of-increasing-supply/" class="pub-card reveal">
+      <a href="https://conservativehome.com/2023/03/07/bartek-staniszewski-labour-promises-a-new-deal-on-housing-but-fails-the-key-challenge-of-increasing-supply/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Mar 2023</div>
       <div class="pub-title">Labour promises a ‘new deal’ on housing. But fails the key challenge of increasing supply.</div>
       <div class="pub-venue">Conservative Home</div>
       <span class="pub-arrow">Read more →</span>
     </a>
   
-      <a href="https://capx.co/good-riddance-to-the-misguided-help-to-buy-experiment" class="pub-card reveal">
+      <a href="https://capx.co/good-riddance-to-the-misguided-help-to-buy-experiment" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Feb 2023</div>
       <div class="pub-title">Good riddance to the misguided Help to Buy experiment</div>
       <div class="pub-venue">CapX</div>
       <span class="pub-arrow">Read more →</span>
     </a>
 
-        <a href="https://conservativehome.com/2023/01/13/bartek-staniszewski-compulsory-purchase-orders-are-bitter-but-their-fruits-may-be-sweet/" class="pub-card reveal">
+        <a href="https://conservativehome.com/2023/01/13/bartek-staniszewski-compulsory-purchase-orders-are-bitter-but-their-fruits-may-be-sweet/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Jan 2023</div>
       <div class="pub-title">Compulsory Purchase Orders are bitter, but their fruits may be sweet</div>
       <div class="pub-venue">Conservative Home</div>
       <span class="pub-arrow">Read more →</span>
     </a>
 
-          <a href="https://centrewrite.brightblue.org.uk/bartlomiej-staniszewski-green-blue/" class="pub-card reveal">
+          <a href="https://centrewrite.brightblue.org.uk/bartlomiej-staniszewski-green-blue/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Nov 2022</div>
       <div class="pub-title">A true blue should always go green</div>
       <div class="pub-venue">Centre Write</div>
       <span class="pub-arrow">Read more →</span>
     </a>
 
-            <a href="https://www.brightblue.org.uk/portfolio/an-agenda-for-action-reducing-racial-inequality-in-modern-britain/" class="pub-card reveal">
+            <a href="https://www.brightblue.org.uk/portfolio/an-agenda-for-action-reducing-racial-inequality-in-modern-britain/" class="pub-card reveal" data-type="articles">
       <div class="pub-year">Aug 2022</div>
       <div class="pub-title">An agenda for action: Reducing racial inequality in modern Britain</div>
       <div class="pub-venue">Bright Blue</div>
@@ -1033,6 +1066,23 @@ min-height: auto;
     });
   }, { threshold: 0.12 });
   revealEls.forEach(el => observer.observe(el));
+
+  // Publication filtering
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    // Update active button
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const filter = btn.dataset.filter;
+
+document.querySelectorAll('.pub-card').forEach(card => {
+  const types = card.dataset.type ? card.dataset.type.split(' ') : [];
+  const matches = filter === 'all' || types.includes(filter);
+  card.classList.toggle('hidden', !matches);
+});
+  });
+});
 </script>
 </body>
 </html>
