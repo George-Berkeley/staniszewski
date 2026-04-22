@@ -592,7 +592,7 @@ min-height: auto;
 <!-- Navigation -->
 <nav id="navbar">
   <a href="polish.html" class="nav-logo"> Zmień język na polski <span class="fi fi-pl"></span></a>
-  <ul class="nav-links">
+  <ul class="nav-links" id="nav-links">
     <li><a href="#"> </a></li>
     <li><a href="https://www.staniszewski.biz/">About</a></li>
     <li><a href="writing.html">Writing</a></li>
@@ -600,6 +600,9 @@ min-height: auto;
     <li><a href="cv.html">CV</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <!-- Hero -->
