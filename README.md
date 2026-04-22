@@ -556,22 +556,25 @@ min-height: auto;
 
       
       #hero { grid-template-columns: 1fr; min-height: auto; }
-      .hero-left { padding: 5rem 1.5rem 3rem; border-right: none; border-bottom: 1px solid var(--rule); }
+      .hero-left { padding: 5rem 1.5rem 3rem; border-right: none; border-bottom: 1px solid var(--rule); }     /* Fix hero image: give the wrapper an explicit height so the absolutely-positioned img has something to fill */
       .hero-right {
-  position: relative;
-  overflow: hidden;
-  min-height: 752px;
-}
+        position: relative;
+        overflow: hidden;
+        min-height: unset;
+      }
+      .hero-image-wrap {
+        height: 420px;
+      }
+      .hero-right img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        display: block;
+      }
 
-.hero-right img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
       section { padding: 5rem 1.5rem; }
       .cv-cols { grid-template-columns: 1fr; gap: 3rem; }
       footer { grid-template-columns: 1fr; }
