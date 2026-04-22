@@ -617,7 +617,7 @@ min-height: auto;
   </div>
  <div class="hero-right">
   <div class="hero-image-wrap">
-    <img src="https://i.imgur.com/VsjPWfd.png"/>
+    <img src="bartek_01.png"/>
     <h1 class="hero-name">Bartek Staniszewski</h1>
   </div>
   <div class="hero-actions">
