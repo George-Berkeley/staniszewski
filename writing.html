@@ -34,6 +34,12 @@
       cursor: none;
     }
 
+    /* Hide custom cursor on touch devices */
+    @media (hover: none) {
+      body { cursor: auto; }
+      .cursor { display: none; }
+    }
+    
     /* ── Custom cursor ── */
     .cursor {
       position: fixed; top: 0; left: 0;
