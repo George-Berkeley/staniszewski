@@ -531,7 +531,6 @@ min-height: auto;
     /* ── Responsive ── */
     @media (max-width: 860px) {
       nav { padding: 1.2rem 1.5rem; }
-      .nav-links { gap: 1.5rem; }
      /* Hamburger: show toggle, collapse links into dropdown */
       .nav-toggle { display: flex; }
       .nav-links {
