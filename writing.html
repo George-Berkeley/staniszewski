@@ -1086,6 +1086,22 @@ min-height: auto;
 </footer>
 
 <script>
+    // Hamburger menu toggle
+  const navToggle = document.getElementById('nav-toggle');
+  const navLinks  = document.getElementById('nav-links');
+  navToggle.addEventListener('click', () => {
+    navToggle.classList.toggle('open');
+    navLinks.classList.toggle('open');
+  });
+  // Close menu when a link is tapped
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      navToggle.classList.remove('open');
+      navLinks.classList.remove('open');
+    });
+  });
+
+
   // Cursor
   const cursor = document.getElementById('cursor');
   document.addEventListener('mousemove', e => {
