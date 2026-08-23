@@ -205,7 +205,8 @@ min-height: auto;
 
 .hero-right img {
   width: 100%;
-  height: 550px;        /* or whatever height you want */
+  aspect-ratio: 2 / 3;
+  height: 600px;
   object-fit: cover;
   object-position: center top;
   display: block;
@@ -260,7 +261,8 @@ min-height: auto;
 
 .hero-image-wrap img {
   width: 100%;
-  height: 500px;
+  aspect-ratio: 2 / 3;
+  height: 600px;
   object-fit: cover;
   object-position: center top;
   display: block;
@@ -563,13 +565,13 @@ min-height: auto;
         min-height: unset;
       }
       .hero-image-wrap {
-        height: 420px;
+        height: auto;
       }
       .hero-right img {
-        position: absolute;
-        inset: 0;
+        position: static;
         width: 100%;
-        height: 100%;
+        aspect-ratio: 2 / 3;
+        height: auto;
         object-fit: cover;
         object-position: center top;
         display: block;
@@ -591,14 +593,14 @@ min-height: auto;
 
 <!-- Navigation -->
 <nav id="navbar">
-  <a href="https://www.staniszewski.biz" class="nav-logo"> Come back to English <span class="fi fi-gb"></span></a>
+  <a href="polish.html" class="nav-logo"> Switch back to English <span class="fi fi-gb"></span></a>
   <ul class="nav-links" id="nav-links">
     <li><a href="#"> </a></li>
-    <li><a href="polish.html">O mnie</a></li>
-    <li><a href="writing.html">Publikacje</a></li>
+    <li><a href="https://www.staniszewski.biz/">About</a></li>
+    <li><a href="writing.html">Writing</a></li>
     <li><a href="media.html">Media</a></li>
     <li><a href="cv.html">CV</a></li>
-    <li><a href="contact.html">Kontakt</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>
   <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
     <span></span><span></span><span></span>
@@ -608,19 +610,11 @@ min-height: auto;
 <!-- Hero -->
 <section id="hero">
   <div class="hero-left">
-    <p class="hero-eyebrow"><a href="https://www.linkedin.com/in/bastaniszewski/"><i class="fa-brands fa-linkedin"></i> LinkedIn</a> · <a href="https://x.com/BGStaniszewski"><i class="fa-brands fa-square-twitter"></i> Twitter</a> · <a href="mailto:bastaniszewski@gmail.com"><i class="fa-solid fa-square-envelope"></i> Email</a></p>
-   
-    <p>Analityk polityczny i strateg z czteroletnim doświadczeniem w pracy w samym sercu Westminsteru. Obecnie dzielę swój czas między Warszawę a Londyn; jestem współzałożycielem think tanku Bright Blue Europe oraz byłym dyrektorem ds. badań w brytyjskim oddziale Bright Blue.
-
-<br><br>
+    <p>I am a political analyst and strategist with four years of experience working in the heart of Westminster. Currently based between Warsaw and London, I am the co-Founder and Director of Bright Blue Europe and Head of Policy for Bright Blue globally.<br><br>
     
-    Podczas mojej pracy jako doradca polityczny w dziedzinie spraw publicznych, napisałem dziewięć raportów badawczych, opublikowałem ponad pięćdziesiąt artykułów w dwunastu różnych publikacjach, w tym brytyjskich gazetach "The Spectator" i "The Critic" oraz nadzorowałem proces zatrudnienia siedmiorga pełnoetatowych pracowników. Pod moim kierownictwem zespół badawczy Bright Blue opublikował szesnaście analiz, a około trzydzieści jego zaleceń dotyczących polityki zostało przyjętych przez rząd Wielkiej Brytanii lub inne wiodące partie polityczne w tym kraju. O naszej pracy raportowały między innymi BBC, GB News, LBC i Vatican News.
+    Over the course of my work, I authored ten research reports, published over sixty articles in twelve different publications, including <i>the Spectator</i> and <i>the Critic</i>, and hired seven full-time employees. Under my leadership, the research team at Bright Blue published eighteen analyses and had around thirty of its policy recommendations adopted by either the UK Government or major UK political parties. Our work has been featured, among others, on the BBC, GB News, LBC, and Vatican News. <br> <br>I am also the Editor-in-Chief of Centre Write and a political adviser to several political campaigns.<br><br>I am primarily interested in social policy, political philosophy, and political strategy. Before working in politics, I read for a Master's in Philosophical Theology and for a BA in Philosophy and Theology at the University of Oxford. You can find my work on those topics on this website.<br><br></p>
 
-<br> <br>Jestem również redaktorem naczelnym czasopisma internetowego Centre Write oraz doradcą politycznym w kilku kampaniach wyborczych.
-
-<br><br>Moimi głównymi zainteresowaniami są: polityka społeczna, filozofia polityki i strategie polityczne. Zanim zacząłem pracę w think tanku, ukończyłem studia magisterskie z teologii filozoficznej na Uniwersytecie Oksfordzkim. Wszystkie wymienione wyżej tematy poruszam w publikacjach, które można znaleźć na tej stronie. 
-
-</p>
+    <p class="hero-eyebrow"><a href="https://www.linkedin.com/in/bastaniszewski/"><i class="fa-brands fa-linkedin"></i> LinkedIn</a> · <a href="https://x.com/BGStaniszewski"><i class="fa-brands fa-square-twitter"></i> Twitter</a> · <a href="mailto:bastaniszewski@gmail.com"><i class="fa-solid fa-square-envelope"></i> Email</a></p>
 
   </div>
  <div class="hero-right">
@@ -629,8 +623,8 @@ min-height: auto;
     <h1 class="hero-name">Bartek Staniszewski</h1>
   </div>
   <div class="hero-actions">
-    <a href="https://www.staniszewski.biz/writing.html" class="btn btn-gold">Moje publikacje</a>
-    <a href="https://www.staniszewski.biz/cv.html" class="btn">CV</a>
+    <a href="https://www.staniszewski.biz/writing.html" class="btn btn-gold">Read my work</a>
+    <a href="https://www.staniszewski.biz/cv.html" class="btn">View my CV</a>
   </div>
 </div>
 </section>
@@ -638,56 +632,51 @@ min-height: auto;
 <!-- Publications -->
 <section id="publications">
   <div class="section-header reveal">
-    <div class="section-number">Wybrane publikacje</div>
+    <div class="section-number">Select recent work</div>
     <div class="section-title-block">
       <h2></h2>
-      <p>Raporty, artykuły, i rozmowy</p>
+      <p>Reports, articles and talks</p>
     </div>
   </div>
 
   <div class="publications-grid">
-    <a href="https://www.brightblue.org.uk/wp-content/uploads/2025/10/BB-Essay-Collection-August-2025_PRF04.pdf" class="pub-card reveal">
-      <div class="pub-year">2025</div>
-      <div class="pub-title">Mending the net? A new centre-right approach to social security</div>
+    <a href="https://www.brightblue.org.uk/portfolio/working-it-out/" class="pub-card reveal">
+      <div class="pub-year">2026</div>
+      <div class="pub-title">Working it out: A new deal for the self-employed</div>
       <div class="pub-venue">Bright Blue</div>
-      <div class="pub-desc">Jestem redaktorem zbioru esejów poświęconych reformie systemu zabezpieczenia społecznego w Wielkiej Brytanii oraz autorem wstępu. W zbiorze tym znalazły się również teksty autorstwa Danny’ego Krugera, Henry’ego Hilla, Davida Goodharta, Johna Glena i innych autorów. 
-</div>
-      <span class="pub-arrow">Czytaj dalej →</span>
+      <div class="pub-desc">I was the lead author on the most significant report on public policy and self-employment in the UK since the 2016 Deane Review.</div>
+      <span class="pub-arrow">Read more →</span>
     </a>
 
     <a href="https://centrewrite.brightblue.org.uk/interview-with-mel-stride/" class="pub-card reveal">
       <div class="pub-year">2025</div>
-      <div class="pub-title">Wywiad z Melem Stride'm</div>
+      <div class="pub-title">Interview with Mel Stride</div>
       <div class="pub-venue">Centre Write</div>
-      <div class="pub-desc">Przeprowadziłem wywiad z Melem Stride'em, posłem do Izby Gmin brytyjskiego parlamentui  ministrem finansów w gabinecie cieni, z okazji premiery czasopisma Centre Write.
-</div>
-      <span class="pub-arrow">Czytaj dalej →</span>
+      <div class="pub-desc">I interviewed the Rt Hon Mel Stride MP, the Shadow Chancellor of the Exchquer, for the launch of the Centre Write magazine.</div>
+      <span class="pub-arrow">Read more →</span>
     </a>
 
     <a href="https://www.brightblue.org.uk/portfolio/right-road/" class="pub-card reveal">
       <div class="pub-year">2025</div>
       <div class="pub-title">The right road: The future of the European centre-right</div>
       <div class="pub-venue">Bright Blue</div>
-      <div class="pub-desc">Jestem autorem większości rozdziałów tej książki, poświęconej przeszłości i przyszłości europejskiej centroprawicy. 
-</div>
-      <span class="pub-arrow">Czytaj dalej →</span>
+      <div class="pub-desc">I wrote most of the chapters in this book about the past and future of the European centre-right.</div>
+      <span class="pub-arrow">Read more →</span>
     </a>
 
     <a href="https://spectator.com/article/its-time-to-tackle-britains-health-and-safety-obsession/" class="pub-card reveal">
       <div class="pub-year">2025</div>
       <div class="pub-title">Red tape has broken Britain</div>
       <div class="pub-venue">The Spectator</div>
-      <div class="pub-desc">Artykuł na temat rozpadu umowy społecznej w Wielkiej Brytanii. 
-</div>
-      <span class="pub-arrow">Czytaj dalej →</span>
+      <div class="pub-desc">An article on a true cause behind the collapse of the social contract in the UK.</div>
+      <span class="pub-arrow">Read more →</span>
     </a>
 
     <a href="https://spectator.com/article/autists-are-the-answer-to-britains-worklessness-crisis/" class="pub-card reveal">
       <div class="pub-year">2025</div>
       <div class="pub-title">Autists are the answer to Britain’s worklessness crisis</div>
       <div class="pub-venue">The Spectator</div>
-      <div class="pub-desc">Artykuł poświęcony relacjom między osobami w spektrum autyzmu w Wielkiej Brytanii a systemem świadczeń socjalnych.
-</div>
+      <div class="pub-desc">An article on the interaction between the UK's autistic population and the benefit claimant system.</div>
       <span class="pub-arrow">Read more →</span>
     </a>
 
@@ -695,8 +684,7 @@ min-height: auto;
       <div class="pub-year">2024</div>
       <div class="pub-title">Not everyone should be in therapy</div>
       <div class="pub-venue">The Critic</div>
-      <div class="pub-desc">Artykuł poświęcony problemom związanym z wszechobecną kulturą terapii. 
-</div>
+      <div class="pub-desc">An article on the prevalence of and problems with therapy culture.</div>
       <span class="pub-arrow">Read more →</span>
     </a>
 
@@ -707,19 +695,19 @@ min-height: auto;
 <footer id="contact">
   <div>
     <div class="footer-brand">Bartek Staniszewski</div>
-    <div class="footer-tagline">Doradztwo, analizy i strategia polityczna</div>
+    <div class="footer-tagline">Political advisory, analysis & strategy</div>
   </div>
   <div>
-    <div class="footer-heading">Nawigacja strony</div>
+    <div class="footer-heading">Navigate</div>
     <ul class="footer-links">
-      <li><a href="writing.html">Publikacje</a></li>
+      <li><a href="writing.html">Publications</a></li>
       <li><a href="media.html">Media</a></li>
       <li><a href="cv.html">CV</a></li>
-      <li><a href="contact.html">Kontakt</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </div>
   <div>
-    <div class="footer-heading">Linki</div>
+    <div class="footer-heading">Other links</div>
     <ul class="footer-links">
       <li><a href="https://www.eubrightblue.org/">Bright Blue Europe</a></li>
       <li><a href="https://www.brightblue.org.uk/portfolio/bartek-staniszewski/">Bright Blue UK</a></li>
