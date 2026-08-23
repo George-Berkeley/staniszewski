@@ -1,0 +1,1275 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bartłomiej Staniszewski — Publikacje</title>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Karla:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:    #1a1612;
+      --paper:  #f5f0e8;
+      --cream:  #ede7d9;
+      --green:  #152913;
+      --gold:   #b5802a;      --muted:  #7a7060;
+      --rule:   rgba(26,22,18,.15);
+      --serif:  'Cormorant Garamond', Georgia, serif;
+      --sans:   'Karla', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 15px;
+      line-height: 1.7;
+      cursor: none;
+    }
+
+    /* Hide custom cursor on touch devices */
+    @media (hover: none) {
+      body { cursor: auto; }
+      .cursor { display: none; }
+    }
+    
+    /* ── Custom cursor ── */
+    .cursor {
+      position: fixed; top: 0; left: 0;
+      width: 10px; height: 10px;
+      background: var(--gold);
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      transition: transform .12s ease, width .2s ease, height .2s ease;
+      z-index: 9999;
+      mix-blend-mode: multiply;
+    }
+    a:hover ~ .cursor, a:hover .cursor { width: 20px; height: 20px; }
+
+    .filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  margin-bottom: 2.5rem;
+}
+.filter-btn {
+  font-family: var(--sans);
+  font-size: .72rem;
+  font-weight: 500;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .45rem 1.1rem;
+  border: 1px solid var(--rule);
+  background: transparent;
+  color: var(--muted);
+  cursor: none;
+  transition: background .2s, color .2s, border-color .2s;
+}
+.filter-btn:hover  { border-color: var(--gold); color: var(--gold); }
+.filter-btn.active { background: var(--gold); border-color: var(--gold); color: var(--paper); }
+
+.pub-card { transition: border-color .2s, background .2s, opacity .25s, transform .25s; }
+.pub-card.hidden  { display: none; }
+
+    /* ── Nav ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.4rem 3rem;
+      background: var(--paper);
+      border-bottom: 1px solid var(--rule);
+      z-index: 100;
+      transition: box-shadow .3s;
+    }
+    nav.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,.06); }
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      font-weight: 600;
+      letter-spacing: .02em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 2.4rem; list-style: none; align-items: center; }
+    .nav-links a {
+      font-family: var(--sans);
+      font-size: .78rem;
+      font-weight: 500;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      position: relative;
+      transition: color .2s;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute; left: 0; bottom: -2px;
+      width: 0; height: 1px;
+      background: var(--gold);
+      transition: width .3s ease;
+    }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-links a:hover::after { width: 100%; }
+
+    /* ── Hamburger toggle ── */
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      z-index: 110;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--ink);
+      transition: transform .3s ease, opacity .3s ease;
+    }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    
+    /* ── Hero ── */
+    #hero {
+min-height: auto; 
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 80px;
+  overflow: hidden;
+  align-items: start; 
+}
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  padding: 3rem 4rem 6rem 3rem; 
+  border-right: 1px solid var(--rule);
+}
+    .hero-eyebrow {
+      font-family: var(--sans);
+      font-size: .72rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.8rem;
+      opacity: 0;
+      animation: fadeUp .7s .1s forwards;
+    }
+    .hero-name {
+      font-family: var(--serif);
+      font-size: clamp(3.5rem, 6vw, 6rem);
+      font-weight: 300;
+      line-height: 1.05;
+      letter-spacing: -.01em;
+      opacity: 0;
+      animation: fadeUp .7s .25s forwards;
+    }
+    .hero-name em {
+      font-style: italic;
+      color: var(--gold);
+    }
+    .hero-tagline {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--muted);
+      margin-top: 2rem;
+      max-width: 360px;
+      opacity: 0;
+      animation: fadeUp .7s .4s forwards;
+    }
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;      /* space around the buttons */
+  opacity: 0;
+  animation: fadeUp .7s .55s forwards;
+}
+    .btn {
+      display: inline-block;
+      padding: .7rem 1.8rem;
+      font-family: var(--sans);
+      font-size: .78rem;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 1px solid var(--ink);
+      color: var(--ink);
+      transition: background .25s, color .25s;
+    }
+    .btn:hover { background: var(--ink); color: var(--paper); }
+    .btn-gold { border-color: var(--gold); color: var(--gold); }
+    .btn-gold:hover { background: var(--gold); color: var(--paper); }
+
+.hero-right {
+  position: relative;
+  background: var(--paper);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0; /* remove padding so image goes edge-to-edge */
+}
+
+.hero-right img {
+  width: 100%;
+  height: 550px;        /* or whatever height you want */
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  outline: 5px solid var(--green); /* Your golden border */
+  outline-offset: -5px;           /* Pulls the border inside the image */
+}
+     .hero-name {
+      position: absolute;
+      bottom: 2rem;
+      left: 2rem;
+      z-index: 1;
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 2.5vw, 2.6rem);
+      font-weight: 300;
+      color: #fff;
+      text-shadow: 0 2px 16px rgba(0,0,0,.55);
+      opacity: 0;
+      animation: fadeUp .7s .4s forwards;
+    }
+    .hero-right-bg {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse at 70% 30%, rgba(181,128,42,.12) 0%, transparent 60%),
+        radial-gradient(ellipse at 20% 80%, rgba(26,22,18,.06) 0%, transparent 50%);
+    }
+    .hero-pull {
+      position: relative;
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.3;
+      color: var(--ink);
+      max-width: 320px;
+      text-align: right;
+      opacity: 0;
+      animation: fadeUp .9s .6s forwards;
+    }
+    .hero-pull::before {
+      content: '\201C';
+      font-size: 6rem;
+      line-height: 0;
+      vertical-align: -.4em;
+      color: var(--gold);
+      opacity: .5;
+      margin-right: .1em;
+    }
+    .hero-image-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.hero-image-wrap img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+    .hero-counter {
+      position: absolute; top: 3rem; left: 3rem;
+      display: flex; flex-direction: column; gap: 2rem;
+      opacity: 0; animation: fadeIn 1s .8s forwards;
+    }
+    .counter-item { text-align: left; }
+    .counter-num {
+      font-family: var(--serif);
+      font-size: 2.6rem;
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .counter-label {
+      font-size: .7rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* ── Section shell ── */
+    section { padding: 7rem 3rem; }
+    section:nth-child(even) { background: var(--cream); }
+    .section-header {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 2rem;
+      align-items: baseline;
+      margin-bottom: 4rem;
+    }
+    .section-number {
+      font-family: var(--serif);
+      font-size: 4.5rem;
+      font-weight: 300;
+      color: var(--gold);
+      opacity: .35;
+      line-height: 1;
+    }
+    .section-title-block h2 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 300;
+      line-height: 1.1;
+    }
+    .section-title-block p {
+      font-size: .8rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: .4rem;
+    }
+
+    /* ── Publications ── */
+    .publications-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2px;
+    }
+    .pub-card {
+      background: var(--paper);
+      padding: 2.2rem;
+      border-left: 2px solid transparent;
+      transition: border-color .2s, background .2s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    section:nth-child(even) .pub-card { background: var(--paper); }
+    .pub-card:hover { border-left-color: var(--gold); }
+    .pub-year {
+      font-size: .7rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: .7rem;
+    }
+    .pub-title {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      font-weight: 600;
+      line-height: 1.35;
+      margin-bottom: .5rem;
+    }
+    .pub-venue {
+      font-family: var(--serif);
+      font-size: .95rem;
+      font-style: italic;
+      color: var(--muted);
+      margin-bottom: .8rem;
+    }
+    .pub-desc {
+      font-size: .82rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .pub-arrow {
+      display: inline-block;
+      margin-top: 1.2rem;
+      font-size: .72rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      transition: letter-spacing .2s;
+    }
+    .pub-card:hover .pub-arrow { letter-spacing: .18em; }
+
+    /* ── TV Appearances ── */
+    .tv-list { display: flex; flex-direction: column; gap: 0; }
+    .tv-item {
+      display: grid;
+      grid-template-columns: 120px 1fr auto;
+      gap: 2rem;
+      align-items: center;
+      padding: 1.8rem 0;
+      border-bottom: 1px solid var(--rule);
+      text-decoration: none;
+      color: inherit;
+      transition: padding-left .2s;
+    }
+    .tv-item:first-child { border-top: 1px solid var(--rule); }
+    .tv-item:hover { padding-left: .8rem; }
+    .tv-date {
+      font-size: .72rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .tv-body {}
+    .tv-show {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    .tv-topic {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: .95rem;
+      color: var(--muted);
+    }
+    .tv-channel {
+      font-size: .72rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--gold);
+      white-space: nowrap;
+    }
+
+    /* ── CV ── */
+    .cv-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+    }
+    .cv-section-title {
+      font-size: .72rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.8rem;
+      padding-bottom: .6rem;
+      border-bottom: 1px solid var(--gold);
+      display: inline-block;
+    }
+    .cv-entry { margin-bottom: 2rem; }
+    .cv-entry-head {
+      display: flex; justify-content: space-between; align-items: baseline;
+      margin-bottom: .25rem;
+    }
+    .cv-role {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+    .cv-period {
+      font-size: .72rem;
+      color: var(--muted);
+      letter-spacing: .06em;
+      white-space: nowrap;
+      margin-left: 1rem;
+    }
+    .cv-org {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: .9rem;
+      color: var(--muted);
+    }
+    .cv-detail {
+      font-size: .82rem;
+      color: var(--muted);
+      margin-top: .3rem;
+    }
+    .cv-download {
+      margin-top: 3.5rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+
+    /* ── Contact / Footer ── */
+    footer {
+      background: var(--green);
+      color: var(--paper);
+      padding: 5rem 3rem 3rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 3rem;
+    }
+    .footer-brand {
+      font-family: var(--serif);
+      font-size: 2rem;
+      font-weight: 300;
+    }
+    .footer-tagline {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: .9rem;
+      color: rgba(245,240,232,.45);
+      margin-top: .5rem;
+    }
+    .footer-heading {
+      font-size: .65rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+    }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: .5rem; }
+    .footer-links a {
+      color: rgba(245,240,232,.65);
+      text-decoration: none;
+      font-size: .85rem;
+      transition: color .2s;
+    }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-copy {
+      grid-column: 1/-1;
+      border-top: 1px solid rgba(245,240,232,.1);
+      padding-top: 2rem;
+      font-size: .72rem;
+      color: rgba(245,240,232,.3);
+      letter-spacing: .06em;
+      display: flex; justify-content: space-between;
+    }
+
+    /* ── Animations ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(22px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; } to { opacity: 1; }
+    }
+
+    /* Scroll-triggered reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 860px) {
+      nav { padding: 1.2rem 1.5rem; }
+     /* Hamburger: show toggle, collapse links into dropdown */
+      .nav-toggle { display: flex; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        flex-direction: column;
+        gap: 0;
+        background: var(--paper);
+        border-bottom: 1px solid var(--rule);
+        box-shadow: 0 4px 20px rgba(0,0,0,.07);
+        padding: .5rem 1.5rem 1.5rem;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links li { border-bottom: 1px solid var(--rule); }
+      .nav-links li:last-child { border-bottom: none; }
+      .nav-links a {
+        display: block;
+        padding: .75rem 0;
+        font-size: .85rem;
+      }
+      #hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-left { padding: 5rem 1.5rem 3rem; border-right: none; border-bottom: 1px solid var(--rule); }
+      .hero-right {
+  position: relative;
+  overflow: hidden;
+  min-height: 752px;
+}
+
+.hero-right img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+      section { padding: 5rem 1.5rem; }
+      .cv-cols { grid-template-columns: 1fr; gap: 3rem; }
+      footer { grid-template-columns: 1fr; padding: 3rem 1.5rem 2rem; }
+      .footer-copy { flex-direction: column; gap: .5rem; }
+      .tv-item { grid-template-columns: 80px 1fr; }
+      .tv-channel { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Custom cursor -->
+<div class="cursor" id="cursor"></div>
+
+<!-- Navigation -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo"> Switch back to English <span class="fi fi-gb"></span></a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#"> </a></li>
+    <li><a href="polish.html">O mnie</a></li>
+    <li><a href="writing_polish.html">Publikacje</a></li>
+    <li><a href="media_polish.html">Media</a></li>
+    <li><a href="cv_polish.html">CV</a></li>
+    <li><a href="contact_polish.html">Kontakt</a></li>
+  </ul>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+
+
+<!-- Publications -->
+<section id="publications">
+  <div class="section-header reveal">
+    <div class="section-number">01</div>
+    <div class="section-title-block">
+      <h2>Pełna lista publikacji mojego autorstwa (w j. angielskim)</h2>
+      <p>Książki, raporty, eseje</p>
+    </div>
+  </div>
+
+<div class="filter-bar reveal">
+  <button class="filter-btn active" data-filter="all">Wszystko</button>
+  <button class="filter-btn" data-filter="books">Książki &amp; raporty</button>
+  <button class="filter-btn" data-filter="articles">Artykuły</button>
+  <button class="filter-btn" data-filter="interviews">Wywiady</button>
+  <button class="filter-btn" data-filter="collections">Publikacje zbiorowe</button>
+</div>
+  
+<div class="publications-grid">
+
+    <a href="https://spectator.com/article/andy-burnhams-plan-to-end-rough-sleeping-will-fail/" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Aug 2026</div>
+      <div class="pub-title">Andy Burnham’s plan to end rough sleeping will fail</div>
+      <div class="pub-venue">The Spectator</div>
+      <div class="pub-desc"></div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+  
+    <a href="https://commentcentral.co.uk/employees-are-paying-for-a-system-the-self-employed-despise" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Aug 2026</div>
+      <div class="pub-title">Employees are paying for a system the self-employed despise</div>
+      <div class="pub-venue">Comment Central</div>
+      <div class="pub-desc"></div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+  
+    <a href="https://thecritic.co.uk/tax-work-not-workers/" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Aug 2026</div>
+      <div class="pub-title">Tax work, not workers</div>
+      <div class="pub-venue">The Critic</div>
+      <div class="pub-desc"></div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+  
+    <a href="https://www.brightblue.org.uk/portfolio/working-it-out/" class="pub-card reveal" data-type="books">
+      <div class="pub-year">Aug 2026</div>
+      <div class="pub-title">Working it out: A new deal for the self-employed</div>
+      <div class="pub-venue">Bright Blue</div>
+      <div class="pub-desc"></div>
+      <span class="pub-arrow">Read more →</span>
+    </a> 
+  
+    <a href="https://spectator.com/article/how-poland-and-ukraine-can-repair-their-broken-relationship/" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Jul 2026</div>
+      <div class="pub-title">How Poland and Ukraine can repair their broken relationship</div>
+      <div class="pub-venue">The Spectator</div>
+      <div class="pub-desc"></div>
+      <span class="pub-arrow">Read more →</span>
+    </a> 
+  
+    <a href="https://klubjagiellonski.pl/2026/07/02/chrzescijanstwo-paula-kingsnortha-to-postmodernizm-katolicy-powinni-byc-ostrozni/" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Jul 2026</div>
+      <div class="pub-title">Paul Kingsnorth's Christianity is postmodern. Catholics should be cautious</div>
+      <div class="pub-venue">Klub Jagiellonski / The Jagiellonian Club</div>
+      <div class="pub-desc"></div>
+      <span class="pub-arrow">Read more →</span>
+    </a> 
+  
+    <a href="https://edgp.gazetaprawna.pl/opinie/artykuly/11266193,dziesiec-lat-po-wyjsciu-z-ue-brytyjczycy-zaluja-brexitu.html" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Jun 2026</div>
+      <div class="pub-title">Brexit. Are Brits happy to have left the EU?</div>
+      <div class="pub-venue">Dziennik Gazeta Prawna / Law Gazette Daily</div>
+      <div class="pub-desc"></div>
+      <span class="pub-arrow">Read more →</span>
+    </a> 
+  
+    <a href="https://liberte.pl/nowy-stary-liberalizm/" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Jun 2026</div>
+      <div class="pub-title">Nowy-stary liberalizm</div>
+      <div class="pub-venue">Liberté!</div>
+      <div class="pub-desc"></div>
+      <span class="pub-arrow">Read more →</span>
+    </a> 
+  
+    <a href="https://klubjagiellonski.pl/2026/05/27/tom-holland-boze-wladztwo-i-cichy-powrot-chrzescijanstwa-na-zachodzie/" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">May 2026</div>
+      <div class="pub-title">Tom Holland, Dominion, and the quiet revival of Christianity in the West</div>
+      <div class="pub-venue">Klub Jagiellonski / The Jagiellonian Club</div>
+      <div class="pub-desc"></div>
+      <span class="pub-arrow">Read more →</span>
+    </a> 
+  
+    <a href="https://edgp.gazetaprawna.pl/opinie/artykuly/11250328,dlaczego-mlodym-trudno-o-prace-trzy-zjawiska-ktore-uderzyly-w-20lat.html" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">May 2026</div>
+      <div class="pub-title">Why cannot the young find jobs? Three phenomena which hit 20-year-olds</div>
+      <div class="pub-venue">Dziennik Gazeta Prawna / Law Gazette Daily</div>
+      <div class="pub-desc"></div>
+      <span class="pub-arrow">Read more →</span>
+    </a> 
+  
+    <a href="https://edgp.gazetaprawna.pl/opinie/artykuly/11246296,koniec-arystokratow-w-izbie-lordow-brytania-zegna-ostatni-bastion-sta.html" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">May 2026</div>
+      <div class="pub-title">The end of aristocrats in the House of Lords. Britain bids farewell to the final bastion of ancient Europe</div>
+      <div class="pub-venue">Dziennik Gazeta Prawna / Law Gazette Daily</div>
+      <div class="pub-desc"></div>
+      <span class="pub-arrow">Read more →</span>
+    </a> 
+  
+    <a href="https://www.cityam.com/lets-create-new-hereditary-peers-and-put-them-to-work-just-not-in-the-lords/" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">May 2026</div>
+      <div class="pub-title">Hereditary peers belong in politics — but not in the Lords</div>
+      <div class="pub-venue">City AM</div>
+      <div class="pub-desc"></div>
+      <span class="pub-arrow">Read more →</span>
+    </a> 
+  
+    <a href="https://klubjagiellonski.pl/2026/04/29/przebudzenie-chrzescijanstwa-na-zachodzie-tak-ale-wsrod-elit/" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Apr 2026</div>
+      <div class="pub-title">A Quiet Revival in the West? Yes, but only among the elites</div>
+      <div class="pub-venue">Klub Jagiellonski / The Jagiellonian Club</div>
+      <div class="pub-desc"></div>
+      <span class="pub-arrow">Read more →</span>
+    </a> 
+  
+    <a href="https://www.gazetaprawna.pl/wiadomosci/opinie/artykuly/11238454,prawica-bije-na-alarm-demograficzny-czy-ma-pomysly-na-wzrost-dzietnos.html" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Apr 2026</div>
+      <div class="pub-title">The right is ringing the bell on demography. Does it have ideas for improving the birth rate?</div>
+      <div class="pub-venue">Gazeta Prawna / The Law Gazette</div>
+      <div class="pub-desc"></div>
+      <span class="pub-arrow">Read more →</span>
+    </a> 
+  
+    <a href="https://www.brightblue.org.uk/portfolio/higher-ground-living-standards/" class="pub-card reveal" data-type="books">
+      <div class="pub-year">Mar 2026</div>
+      <div class="pub-title">Higher ground: A centre-right vision to raise living standards</div>
+      <div class="pub-venue">Bright Blue</div>
+      <div class="pub-desc"></div>
+      <span class="pub-arrow">Read more →</span>
+    </a> 
+  
+  <a href="https://thecritic.co.uk/polish-lessons-for-the-british-right/" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Feb 2026</div>
+      <div class="pub-title">Polish lessons for the British right</div>
+      <div class="pub-venue">The Critic</div>
+      <div class="pub-desc"></div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+
+      <a href="https://thecritic.co.uk/britain-is-failing-the-toilet-test/" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Jan 2026</div>
+      <div class="pub-title">Britain is failing the toilet test</div>
+      <div class="pub-venue">The Critic</div>
+      <div class="pub-desc"></div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+
+        <a href="https://spectator.com/article/its-time-to-tackle-britains-health-and-safety-obsession/" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Nov 2025</div>
+      <div class="pub-title">Red tape has broken Britain</div>
+      <div class="pub-venue">The Spectator</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+  
+  <a href="https://www.brightblue.org.uk/wp-content/uploads/2025/10/BB-Essay-Collection-August-2025_PRF04.pdf" class="pub-card reveal" data-type="books collections">
+      <div class="pub-year">Oct 2025</div>
+      <div class="pub-title">Mending the net? A new centre-right approach to social security</div>
+      <div class="pub-venue">Bright Blue</div>
+      <div class="pub-desc"></div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+
+    <a href="https://centrewrite.brightblue.org.uk/interview-with-mel-stride/" class="pub-card reveal" data-type="interviews">
+      <div class="pub-year">Oct 2025</div>
+      <div class="pub-title">Interview with Mel Stride</div>
+      <div class="pub-venue">Centre Write</div>
+      <div class="pub-desc"></div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+
+
+    <a href="https://conservativehome.com/2025/09/19/bartek-staniszewski-kruger-is-a-loss-to-the-conservatives-but-his-christian-philosophy-may-not-find-the-same-home-in-reform/" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Sep 2025</div>
+      <div class="pub-title">Kruger is a loss to the Conservatives but his Christian philosophy may not find the same home in Reform</div>
+      <div class="pub-venue">Conservative Home</div>
+      <div class="pub-desc"></div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+
+      <a href="https://spectator.com/article/autists-are-the-answer-to-britains-worklessness-crisis/" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Sep 2025</div>
+      <div class="pub-title">Autists are the answer to Britain’s worklessness crisis</div>
+      <div class="pub-venue">The Spectator</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+  
+    <a href="https://thecritic.co.uk/the-problem-of-online-ugliness/" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Jul 2025</div>
+      <div class="pub-title">The problem of online ugliness</div>
+      <div class="pub-venue">The Critic</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+
+      <a href="https://www.yorkshirepost.co.uk/news/opinion/columnists/the-chancellors-leeds-reforms-are-a-step-in-the-right-direction-but-more-needs-to-be-done-bartek-staniszewski-5232148" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Jul 2025</div>
+      <div class="pub-title">The Chancellor’s Leeds Reforms are a step in the right direction but more needs to be done</div>
+      <div class="pub-venue">The Yorkshire Post</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+
+    <a href="https://spectator.com/article/why-conservatives-should-embrace-their-christian-heritage/" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Jun 2025</div>
+      <div class="pub-title">Why conservatives should embrace their Christian heritage</div>
+      <div class="pub-venue">The Spectator</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+  
+    <a href="https://www.brightblue.org.uk/portfolio/right-road/" class="pub-card reveal" data-type="books">
+      <div class="pub-year">Jun 2025</div>
+      <div class="pub-title">The right road: The future of the European centre-right</div>
+      <div class="pub-venue">Bright Blue</div>
+      <div class="pub-desc"></div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+
+    <a href="https://spectator.com/article/what-karol-nawrockis-triumph-means-for-poland/" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Jun 2025</div>
+      <div class="pub-title">What Karol Nawrocki’s triumph means for Poland</div>
+      <div class="pub-venue">The Spectator</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+
+    <a href="https://www.cityam.com/why-dont-we-mutualise-british-steel/" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Apr 2025</div>
+      <div class="pub-title">Why don't we mutualise British Steel?</div>
+      <div class="pub-venue">City AM</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+
+    <a href="https://capx.co/the-centre-right-is-still-our-best-bet-for-prosperity/" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Apr 2025</div>
+      <div class="pub-title">The centre-right is still our best bet for prosperity</div>
+      <div class="pub-venue">CapX</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+
+      <a href="https://conservativehome.com/2025/03/20/bartek-staniszewski-a-party-without-a-clear-philosophy-is-not-going-to-win-votes-just-look-around-europe/" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Mar 2025</div>
+      <div class="pub-title">A party without a clear philosophy is not going to win votes – just look around Europe</div>
+      <div class="pub-venue">Conservative Home</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+  
+      <a href="https://thecritic.co.uk/the-case-for-more-kids/" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Feb 2025</div>
+      <div class="pub-title">The case for more kids</div>
+      <div class="pub-venue">The Critic</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+  
+      <a href="https://www.cityam.com/faith-has-a-place-in-politics/" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Dec 2024</div>
+      <div class="pub-title">Faith has a place in politics</div>
+      <div class="pub-venue">City AM</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+  
+      <a href="https://www.yorkshirepost.co.uk/news/opinion/columnists/labours-distaste-towards-beauty-risks-undermining-its-drive-to-build-more-homes-bartek-staniszewski-4874136" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Nov 2024</div>
+      <div class="pub-title">Labour’s distaste towards ‘beauty’ risks undermining its drive to build more homes</div>
+      <div class="pub-venue">The Yorkshire Post</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+  
+      <a href="https://www.brightblue.org.uk/portfolio/generation-ai/" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Nov 2024</div>
+      <div class="pub-title">Harbingers of the end times?</div>
+      <div class="pub-venue">Centre Write</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+  
+      <a href="https://thecritic.co.uk/trump-post-modernist/" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Nov 2024</div>
+      <div class="pub-title">Trump: Post-Modernist?</div>
+      <div class="pub-venue">The Critic</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+  
+      <a href="https://capx.co/assisted-dying-is-an-affront-against-human-liberty" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Oct 2024</div>
+      <div class="pub-title">Assisted dying is an affront against human liberty</div>
+      <div class="pub-venue">CapX</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+  
+      <a href="https://thecritic.co.uk/not-everyone-should-be-in-therapy/" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Aug 2024</div>
+      <div class="pub-title">Not everyone should be in therapy</div>
+      <div class="pub-venue">The Critic</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+  
+      <a href="https://www.yorkshirepost.co.uk/news/opinion/columnists/labours-housing-targets-are-the-least-ambitious-but-most-realistic-bartek-staniszewski-4690022" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Jul 2024</div>
+      <div class="pub-title">Labour's housing targets are the least ambitious but most realistic</div>
+      <div class="pub-venue">The Yorkshire Post</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+  
+      <a href="https://www.brightblue.org.uk/portfolio/great-expectations-public-perceptions-and-expectations-for-the-new-government/" class="pub-card reveal" data-type="books">
+      <div class="pub-year">Jul 2024</div>
+      <div class="pub-title">Great expectations? Public perceptions and expectations for the new Government</div>
+      <div class="pub-venue">Bright Blue</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+  
+      <a href="https://thecritic.co.uk/the-soullessness-of-social-mobility/" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Jun 2024</div>
+      <div class="pub-title">The soullessness of “social mobility”</div>
+      <div class="pub-venue">The Critic</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+  
+      <a href="https://www.yorkshirepost.co.uk/news/opinion/columnists/youve-heard-of-nimbys-but-its-the-bananas-that-are-the-real-problem-holding-the-country-back-bartek-staniszewski-4627323" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">May 2024</div>
+      <div class="pub-title">You’ve heard of NIMBYs but it’s the BANANAs that are the real problem holding the country back</div>
+      <div class="pub-venue">The Yorkshire Post</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+  
+      <a href="https://conservativehome.com/2024/04/22/bartek-staniszewski-under-khan-rough-sleeping-in-london-has-got-worse-his-promises-lack-credibility/" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Apr 2024</div>
+      <div class="pub-title">Under Khan, rough sleeping in London has got worse. His promises lack credibility.</div>
+      <div class="pub-venue">Conservative Home</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+  
+      <a href="https://thecritic.co.uk/katharine-birbalsingh-is-wrong-about-religion-in-schools/" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Apr 2024</div>
+      <div class="pub-title">Katharine Birbalsingh is wrong about religion in schools</div>
+      <div class="pub-venue">The Critic</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+  
+      <a href="https://www.yorkshirepost.co.uk/news/opinion/columnists/construction-and-nature-dont-need-to-be-set-up-as-competing-interests-tony-juniper-bartek-staniszewski-4563253" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Mar 2024</div>
+      <div class="pub-title">Construction and nature don’t need to be set up as competing interests</div>
+      <div class="pub-venue">The Yorkshire Post</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+  
+      <a href="https://www.brightblue.org.uk/portfolio/greater-and-greener-development-polling/" class="pub-card reveal" data-type="books">
+      <div class="pub-year">Mar 2024</div>
+      <div class="pub-title">Greater and greener development</div>
+      <div class="pub-venue">Bright Blue</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+  
+      <a href="https://spectator.com/article/britains-adoration-of-the-nhs-is-nothing-to-celebrate/" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Mar 2024</div>
+      <div class="pub-title">Britain’s adoration of the NHS is nothing to celebrate</div>
+      <div class="pub-venue">The Spectator</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+  
+      <a href="https://www.insidehousing.co.uk/comment/estate-regeneration-is-crucial-to-solving-the-housing-crisis-85171" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Feb 2024</div>
+      <div class="pub-title">Estate regeneration is crucial to solving the housing crisis</div>
+      <div class="pub-venue">Inside Housing</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+  
+      <a href="https://www.cityam.com/with-uk-dividends-disappearing-overseas-its-time-to-resurrect-employee-ownership/" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Feb 2024</div>
+      <div class="pub-title">With UK dividends disappearing overseas, it’s time to resurrect employee ownership</div>
+      <div class="pub-venue">City AM</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+  
+      <a href="https://conservativehome.com/2024/02/05/bartek-staniszewski-businesses-should-help-local-democracy-to-flourish/" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Feb 2024</div>
+      <div class="pub-title">Businesses should help local democracy to flourish</div>
+      <div class="pub-venue">Conservative Home</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+  
+      <a href="https://www.brightblue.org.uk/portfolio/mind-your-business-expanding-democratic-business-in-the-uk/" class="pub-card reveal" data-type="books">
+      <div class="pub-year">Jan 2024</div>
+      <div class="pub-title">Mind your business? Expanding democratic business in the UK</div>
+      <div class="pub-venue">Bright Blue</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+  
+      <a href="https://www.businessgreen.com/opinion/4161092/developments-beautiful-green" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Jan 2024</div>
+      <div class="pub-title">To make developments beautiful, make them green</div>
+      <div class="pub-venue">BusinessGreen</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+  
+      <a href="https://www.yorkshirepost.co.uk/news/opinion/columnists/the-housing-crisis-wont-be-tackled-unless-we-build-on-the-green-belt-bartek-staniszewski-4420013" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Nov 2023</div>
+      <div class="pub-title">The housing crisis won’t be tackled unless we build on the green belt</div>
+      <div class="pub-venue">The Yorkshire Post</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+  
+      <a href="https://conservativehome.com/2023/11/10/bartek-staniszewski-rent-controls-have-increased-homelessness-in-edinburgh/" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Nov 2023</div>
+      <div class="pub-title">Rent controls have increased homelessness in Edinburgh</div>
+      <div class="pub-venue">Conservative Home</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+  
+      <a href="https://capx.co/rent-controls-have-failed-everywhere-and-edinburgh-is-no-different" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Nov 2023</div>
+      <div class="pub-title">Rent controls have failed everywhere – and Edinburgh is no different</div>
+      <div class="pub-venue">CapX</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+  
+      <a href="https://www.cityam.com/even-if-we-do-abolish-no-fault-evictions-renters-are-still-at-risk-of-being-kicked-out/" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Oct 2023</div>
+      <div class="pub-title">Even if we do abolish no fault evictions, renters are still at risk of being kicked out</div>
+      <div class="pub-venue">City AM</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+  
+      <a href="https://www.brightblue.org.uk/portfolio/public-attitudes-towards-the-plight-of-and-policies-for-younger-people/" class="pub-card reveal" data-type="books">
+      <div class="pub-year">Oct 2023</div>
+      <div class="pub-title">Public attitudes towards the plight of and policies for younger people</div>
+      <div class="pub-venue">Bright Blue</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+  
+      <a href="https://conservativehome.com/2023/09/18/bartek-staniszewski-stopping-new-homes-is-the-wrong-way-to-avoid-water-pollution/" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Sep 2023</div>
+      <div class="pub-title">Stopping new homes is the wrong way to avoid water pollution</div>
+      <div class="pub-venue">Conservative Home</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+  
+      <a href="https://www.brightblue.org.uk/portfolio/back-to-business/" class="pub-card reveal" data-type="collections">
+      <div class="pub-year">Aug 2023</div>
+      <div class="pub-title">Back to business?</div>
+      <div class="pub-venue">Centre Write</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+
+        <a href="https://centrewrite.brightblue.org.uk/bartek-staniszewski-the-governments-housing-strategy-left-too-many-things-unsaid/" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Jul 2023</div>
+      <div class="pub-title">The Government’s housing strategy leaves too many things unsaid</div>
+      <div class="pub-venue">Centre Write</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+  
+        <a href="https://www.propertychronicle.com/home-advantage-a-new-centre-right-vision-for-housing/" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Jun 2023</div>
+      <div class="pub-title">Home Advantage: A new centre-right vision for housing</div>
+      <div class="pub-venue">Property Chronicle</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+
+          <a href="https://www.propertychronicle.com/the-housing-crisis-is-worst-in-cities-but-there-are-ways-to-make-it-better/" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">May 2023</div>
+      <div class="pub-title">The housing crisis is worst in cities – but there are ways to make it better</div>
+      <div class="pub-venue">Property Chronicle</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+
+        <a href="https://conservativehome.com/2023/05/16/bartek-staniszewski-reducing-the-demand-for-government-1-families-the-crucial-role-of-housing-and-childcare/" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">May 2023</div>
+      <div class="pub-title">Reducing the demand for government 1) Families. The crucial role of housing and childcare.</div>
+      <div class="pub-venue">Conservative Home</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+
+          <a href="https://www.propertychronicle.com/communities-and-housing-need-not-be-enemies/" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">May 2023</div>
+      <div class="pub-title">Communities and housing need not be enemies</div>
+      <div class="pub-venue">Property Chronicle</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+
+          <a href="https://www.propertychronicle.com/too-many-lack-the-security-of-a-good-home/" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">May 2023</div>
+      <div class="pub-title">Too Many Lack the Security of a Good Home</div>
+      <div class="pub-venue">Property Chronicle</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+  
+      <a href="https://www.brightblue.org.uk/portfolio/home-advantage-a-new-centre-right-vison-for-housing/" class="pub-card reveal" data-type="collections">
+      <div class="pub-year">Apr 2023</div>
+      <div class="pub-title">Home advantage: a new centre-right vision for housing</div>
+      <div class="pub-venue">Bright Blue</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+  
+      <a href="https://conservativehome.com/2023/03/07/bartek-staniszewski-labour-promises-a-new-deal-on-housing-but-fails-the-key-challenge-of-increasing-supply/" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Mar 2023</div>
+      <div class="pub-title">Labour promises a ‘new deal’ on housing. But fails the key challenge of increasing supply.</div>
+      <div class="pub-venue">Conservative Home</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+  
+      <a href="https://capx.co/good-riddance-to-the-misguided-help-to-buy-experiment" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Feb 2023</div>
+      <div class="pub-title">Good riddance to the misguided Help to Buy experiment</div>
+      <div class="pub-venue">CapX</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+
+        <a href="https://conservativehome.com/2023/01/13/bartek-staniszewski-compulsory-purchase-orders-are-bitter-but-their-fruits-may-be-sweet/" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Jan 2023</div>
+      <div class="pub-title">Compulsory Purchase Orders are bitter, but their fruits may be sweet</div>
+      <div class="pub-venue">Conservative Home</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+
+          <a href="https://centrewrite.brightblue.org.uk/bartlomiej-staniszewski-green-blue/" class="pub-card reveal" data-type="articles">
+      <div class="pub-year">Nov 2022</div>
+      <div class="pub-title">A true blue should always go green</div>
+      <div class="pub-venue">Centre Write</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+
+              <a href="https://www.academia.edu/118338301/Hope_and_Time_in_Theology_and_Religion_Editorial_Introduction" class="pub-card reveal" data-type="collections">
+      <div class="pub-year">Nov 2022</div>
+      <div class="pub-title">Hope and Time in Theology and Religion</div>
+      <div class="pub-venue">Journal of the Oxford Graduate Theological Society</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+
+            <a href="https://www.brightblue.org.uk/portfolio/an-agenda-for-action-reducing-racial-inequality-in-modern-britain/" class="pub-card reveal" data-type="collections">
+      <div class="pub-year">Aug 2022</div>
+      <div class="pub-title">An agenda for action: Reducing racial inequality in modern Britain</div>
+      <div class="pub-venue">Bright Blue</div>
+      <span class="pub-arrow">Read more →</span>
+    </a>
+
+  </div>
+</section>
+
+<!-- Footer / Contact -->
+<footer id="contact">
+  <div>
+    <div class="footer-brand">Bartek Staniszewski</div>
+    <div class="footer-tagline">Political advisory, analysis & strategy</div>
+  </div>
+  <div>
+    <div class="footer-heading">Navigate</div>
+    <ul class="footer-links">
+      <li><a href="writing.html">Publications</a></li>
+      <li><a href="media.html">Media</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+  <div>
+    <div class="footer-heading">Other links</div>
+    <ul class="footer-links">
+      <li><a href="https://www.eubrightblue.org/">Bright Blue Europe</a></li>
+      <li><a href="https://www.brightblue.org.uk/portfolio/bartek-staniszewski/">Bright Blue UK</a></li>
+      <li><a href="https://www.linkedin.com/in/bastaniszewski/">LinkedIn</a></li>
+      <li><a href="https://x.com/BGStaniszewski">Twitter / X</a></li>
+    </ul>
+  </div>
+  <div class="footer-copy">
+    <span>Created and  designed in 2026 by Bartlomiej Staniszewski.</span>
+  </div>
+</footer>
+
+<script>
+    // Hamburger menu toggle
+  const navToggle = document.getElementById('nav-toggle');
+  const navLinks  = document.getElementById('nav-links');
+  navToggle.addEventListener('click', () => {
+    navToggle.classList.toggle('open');
+    navLinks.classList.toggle('open');
+  });
+  // Close menu when a link is tapped
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      navToggle.classList.remove('open');
+      navLinks.classList.remove('open');
+    });
+  });
+
+
+  // Cursor
+  const cursor = document.getElementById('cursor');
+  document.addEventListener('mousemove', e => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top  = e.clientY + 'px';
+  });
+  document.querySelectorAll('a, button').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      cursor.style.width = '20px';
+      cursor.style.height = '20px';
+    });
+    el.addEventListener('mouseleave', () => {
+      cursor.style.width = '10px';
+      cursor.style.height = '10px';
+    });
+  });
+
+  // Navbar on scroll
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // Scroll-triggered reveals
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        // stagger siblings
+        const siblings = [...entry.target.parentElement.querySelectorAll('.reveal:not(.visible)')];
+        const idx = siblings.indexOf(entry.target);
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, Math.min(idx * 80, 400));
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => observer.observe(el));
+
+  // Publication filtering
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    // Update active button
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const filter = btn.dataset.filter;
+
+document.querySelectorAll('.pub-card').forEach(card => {
+  const types = card.dataset.type ? card.dataset.type.split(' ') : [];
+  const matches = filter === 'all' || types.includes(filter);
+  card.classList.toggle('hidden', !matches);
+});
+  });
+});
+</script>
+</body>
+</html>
